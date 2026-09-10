@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>두드림B&B × LinkPrice | Integrated Marketing Proposal</title>
+<meta name="description" content="두드림B&B 통합 퍼포먼스·바이럴 마케팅 제안서" />
+<style>
+:root{
+  --navy:#30434D;
+  --navy-2:#22343D;
+  --cyan:#00A4A6;
+  --lime:#8FBE3F;
+  --mint:#EEF7F3;
+  --cream:#FAFAF6;
+  --ink:#162134;
+  --muted:#667085;
+  --line:#DDE4EA;
+  --white:#fff;
+  --soft:#F5F8FB;
+  --shadow:0 18px 48px rgba(18,58,115,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.app{display:flex;min-height:100vh}
+.sidebar{position:fixed;inset:0 auto 0 0;width:250px;background:linear-gradient(180deg,#22343D 0%,#30434D 64%,#243740 100%);color:#fff;padding:28px 22px 24px;z-index:20;overflow:auto}
+.brand-logo{width:126px;opacity:.98;margin-bottom:24px}.dodream-side{background:#fff;border-radius:12px;padding:10px 12px}.dodream-logo{width:170px}.partner-logo{width:150px;opacity:.72}
+.side-kicker{font-size:11px;letter-spacing:.16em;color:#99DDE7;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.side-title{font-size:18px;line-height:1.45;font-weight:800;margin-bottom:24px}
+.nav{display:grid;gap:5px}
+.nav a{display:block;padding:9px 10px;border-radius:9px;font-size:12px;color:rgba(255,255,255,.72);transition:.2s}
+.nav a:hover,.nav a.active{color:#fff;background:rgba(255,255,255,.10)}
+.side-budget{margin-top:22px;padding:14px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.06)}
+.side-budget strong{display:block;font-size:21px;margin-top:2px}
+.side-budget span{font-size:11px;color:rgba(255,255,255,.65)}
+.main{margin-left:250px;width:calc(100% - 250px)}
+section{min-height:100vh;padding:72px 7vw;display:flex;align-items:center;position:relative;overflow:hidden}
+.wrap{width:min(1180px,100%);margin:0 auto;position:relative;z-index:2}
+.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:900;color:var(--cyan);text-transform:uppercase;margin-bottom:14px}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(46px,6vw,82px);line-height:1.08;letter-spacing:-.045em;margin-bottom:28px}
+h2{font-size:clamp(34px,4vw,58px);line-height:1.16;letter-spacing:-.035em;margin-bottom:20px}
+h3{font-size:20px;line-height:1.35;margin-bottom:10px}
+.lead{font-size:18px;line-height:1.75;color:#526174;max-width:860px}
+.em{color:var(--navy)}
+.accent{color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:32px}
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 8px 28px rgba(16,24,40,.04)}
+.card.soft{background:var(--soft)}
+.card.brand{background:linear-gradient(150deg,#F3FCFC,#F7FAEE);border-color:#D7ECE8}
+.card.dark{background:var(--navy-2);color:#fff;border-color:transparent}
+.card.dark p{color:rgba(255,255,255,.72)}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:900;letter-spacing:.10em;color:var(--navy);background:#EDF4FB;border-radius:999px;padding:7px 10px;margin-bottom:16px}
+.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;display:inline-block}
+.muted{color:var(--muted);line-height:1.65}
+.hero{background:linear-gradient(135deg,#F7FBF9 0%,#FFFFFF 58%,#F7F9EE 100%)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(2,169,199,.08);right:-150px;top:-170px}
+.hero:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;background:rgba(183,212,50,.13);right:8vw;bottom:-160px}
+.hero-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:82px}
+.hero-logo{width:190px}
+.hero-chip{font-size:12px;font-weight:800;color:var(--navy);border:1px solid #C9D9E8;border-radius:999px;padding:10px 14px;background:#fff}
+.hero-copy{max-width:940px}
+.hero-copy h1 span{display:block;color:var(--navy)}
+.hero-copy .sub{font-size:18px;color:#5C6B7B;line-height:1.5;max-width:760px}
+.hero-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:46px;max-width:900px}
+.metric{padding:20px 22px;border-radius:18px;background:#fff;border:1px solid #DFE8EE}
+.metric small{display:block;color:#7A8796;font-weight:700;margin-bottom:5px}
+.metric strong{font-size:30px;color:var(--navy)}
+.metric b{font-size:13px;color:var(--cyan);margin-left:6px}
+.budget-board{display:grid;grid-template-columns:1.6fr .8fr;gap:20px;margin-top:36px}
+.budget-main{padding:34px;border-radius:28px;background:linear-gradient(135deg,var(--navy-2),var(--navy));color:white;position:relative;overflow:hidden}
+.budget-main:after{content:"90%";position:absolute;right:-20px;bottom:-48px;font-size:160px;font-weight:900;color:rgba(255,255,255,.055)}
+.budget-side{padding:30px;border-radius:28px;background:linear-gradient(135deg,#F6FAE9,#EFFAF9);border:1px solid #DAE9D0}
+.budget-num{font-size:56px;font-weight:900;letter-spacing:-.05em;margin:10px 0 4px}
+.budget-num small{font-size:19px;font-weight:700}
+.splitbar{height:16px;border-radius:999px;overflow:hidden;background:#EDF1F5;display:flex;margin:26px 0 12px}
+.splitbar i:first-child{width:90%;background:var(--navy)}
+.splitbar i:last-child{width:10%;background:var(--lime)}
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.media{padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.media b{display:block;font-size:18px;margin:8px 0 5px;color:var(--navy)}
+.media span{font-size:13px;color:#7A8796}
+.team{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
+.person{border-radius:20px;background:#fff;border:1px solid var(--line);padding:22px;min-height:230px}
+.person .yr{font-size:32px;color:var(--cyan);font-weight:900;margin-bottom:12px}
+.person .name{font-size:21px;font-weight:900;color:var(--navy)}
+.person .role{font-size:12px;font-weight:800;color:#758296;margin-bottom:14px}
+.person ul{padding-left:18px;margin:0;color:#647185;line-height:1.75;font-size:13px}
+.flow{display:flex;align-items:stretch;gap:10px;margin-top:34px}
+.flow .step{flex:1;border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff}
+.flow .step small{font-size:11px;color:var(--cyan);font-weight:900}
+.flow .arrow{align-self:center;font-size:22px;color:#B0BBC8}
+.ref-zone{margin-top:34px;border:2px dashed #C9D6E1;border-radius:24px;padding:26px;background:repeating-linear-gradient(-45deg,#FAFCFD,#FAFCFD 10px,#F7FAFB 10px,#F7FAFB 20px)}
+.ref-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.ref-title b{font-size:16px;color:var(--navy)}
+.ref-title span{font-size:12px;color:#8996A6}
+.placeholders{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.placeholder{min-height:190px;border:1px dashed #BFCEDA;border-radius:16px;display:grid;place-items:center;text-align:center;color:#99A7B5;background:rgba(255,255,255,.72);padding:18px}
+.placeholder strong{display:block;color:#718096;margin-bottom:6px;font-size:14px}
+.creative .placeholder{aspect-ratio:1/1;min-height:unset}
+.report-frame{border:1px solid #D8E1E8;border-radius:24px;background:#0F1D2E;padding:20px;box-shadow:var(--shadow);margin-top:34px;color:white}
+.report-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.report-top b{font-size:15px}.status{font-size:11px;color:#BDECC6;border:1px solid rgba(189,236,198,.3);padding:6px 9px;border-radius:999px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.kpi{background:#172A41;border-radius:13px;padding:16px}.kpi small{display:block;color:#8FA5BD;margin-bottom:8px}.kpi strong{font-size:17px}
+.report-body{display:grid;grid-template-columns:1.6fr .8fr;gap:12px;margin-top:12px}.panel{background:#172A41;border-radius:14px;padding:18px;min-height:160px}.bars{display:flex;align-items:end;gap:10px;height:95px;margin-top:24px}.bars i{flex:1;background:linear-gradient(180deg,#02A9C7,#5DD4E6);border-radius:5px 5px 2px 2px}.bars i:nth-child(1){height:44%}.bars i:nth-child(2){height:62%}.bars i:nth-child(3){height:52%}.bars i:nth-child(4){height:76%}.bars i:nth-child(5){height:68%}.bars i:nth-child(6){height:88%}
+.channels{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.channel{padding:22px;border-radius:18px;background:#fff;border:1px solid var(--line)}.channel strong{display:block;color:var(--navy);margin-bottom:7px}
+.fee-table{width:100%;border-collapse:collapse;margin-top:30px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}.fee-table th,.fee-table td{padding:17px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}.fee-table th{background:#F0F5F8;color:var(--navy)}.fee-table tr:last-child td{border-bottom:0}.fee-table td:nth-child(2){font-weight:900;color:var(--navy)}
+.quote{margin-top:28px;padding:24px 26px;border-radius:18px;background:#F1F8FA;border-left:4px solid var(--cyan);font-size:20px;line-height:1.55;font-weight:800;color:var(--navy)}
+.closing{background:linear-gradient(135deg,#22343D,#30434D 62%,#24646A);color:white}.closing .eyebrow{color:#93E1EB}.closing h2{color:white}.closing .lead{color:rgba(255,255,255,.72)}.closing .hero-logo{filter:brightness(0) invert(1)}
+.contact{display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:end}.contact-card{padding:26px;border:1px solid rgba(255,255,255,.16);border-radius:20px;background:rgba(255,255,255,.06)}.contact-card small{display:block;color:#92DDE7;font-weight:800;margin-bottom:8px}.contact-card strong{display:block;font-size:28px;margin-bottom:12px}.contact-line{padding:8px 0;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.78)}
+.section-no{position:absolute;right:5vw;top:38px;font-size:12px;font-weight:900;color:#C3CDD7;letter-spacing:.12em}
+@media(max-width:1100px){.team{grid-template-columns:repeat(2,1fr)}.media-grid,.channels{grid-template-columns:repeat(2,1fr)}.placeholders{grid-template-columns:repeat(2,1fr)}.budget-board,.report-body,.contact{grid-template-columns:1fr}.c3{grid-column:span 6}.hero-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.sidebar{display:none}.main{margin-left:0;width:100%}section{min-height:auto;padding:70px 24px}.grid{grid-template-columns:1fr}.c3,.c4,.c6,.c8,.c12{grid-column:auto}.media-grid,.team,.channels,.placeholders,.hero-metrics{grid-template-columns:1fr}.flow{display:grid}.flow .arrow{transform:rotate(90deg);text-align:center}.hero-top{margin-bottom:48px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <img src="assets/dodream-logo.png" class="brand-logo dodream-side" alt="두드림">
+  <div class="side-kicker">DODREAM B&B × LINKPRICE</div>
+  <div class="side-title">통합 마케팅 제안</div>
+  <nav class="nav">
+    <a href="#cover">01. 제안 개요</a><a href="#budget">02. 예산 프레임</a><a href="#media">03. 매체 운영 범위</a><a href="#team">04. 전담 인력</a><a href="#model">05. 운영 모델</a><a href="#health">06. 건기식 레퍼런스</a><a href="#beauty">07. 뷰티 레퍼런스</a><a href="#creative">08. 소재 포트폴리오</a><a href="#process">09. 업무 프로세스</a><a href="#comm">10. 커뮤니케이션</a><a href="#report">11. 성과 보고</a><a href="#global">12. 글로벌</a><a href="#viral">13. 통합 마케팅</a><a href="#commerce">14. 커머스</a><a href="#fee">15. 수수료</a><a href="#close">16. Closing</a>
+  </nav>
+  <div class="side-budget"><span>MONTHLY MARKETING BUDGET</span><strong>₩300M</strong><span>Performance 270M · Viral 30M</span></div>
+</aside>
+<main class="main">
+<section id="cover" class="hero">
+<div class="wrap">
+  <div class="hero-top"><img class="dodream-logo" src="assets/dodream-logo.png" alt="두드림"><img class="hero-logo partner-logo" src="assets/linkprice-logo.png" alt="LinkPrice"></div>
+  <div class="hero-copy"><div class="eyebrow">MARKETING PROPOSAL</div><h1>두드림B&B<br><span>통합 마케팅 제안</span></h1></div>
+  <div class="hero-metrics"><div class="metric"><small>PERFORMANCE</small><strong>270M</strong><b>90%</b></div><div class="metric"><small>VIRAL</small><strong>30M</strong><b>10%</b></div><div class="metric"><small>TOTAL / MONTH</small><strong>300M</strong><b>100%</b></div></div>
+</div></section>
+
+<section id="budget"><span class="section-no">02 / 16</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
+<div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW / month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW / month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
+<div class="splitbar"><i></i><i></i></div><p class="muted">Performance 90% · Viral 10% / 총 월 3억원 기준</p></div></section>
+
+<section id="media"><span class="section-no">03 / 16</span><div class="wrap"><div class="eyebrow">Media Coverage</div><h2>Full-Funnel<br><span class="em">Media Mix</span></h2><div class="media-grid">
+<div class="media"><span>SEARCH</span><b>NAVER</b><p class="muted">SA · GFA · 브랜드/기능 수요 회수</p></div><div class="media"><span>GLOBAL / SEARCH</span><b>Google</b><p class="muted">Search · Display · YouTube · Conversion</p></div><div class="media"><span>SOCIAL</span><b>Meta</b><p class="muted">신규 유입 · 전환 확대 · Creative Test</p></div><div class="media"><span>DISPLAY</span><b>KAKAO</b><p class="muted">대규모 Reach · 관심 기반 확장</p></div><div class="media"><span>RETARGETING</span><b>Mobon · Criteo</b><p class="muted">이탈 유저 재접점 · 상품 기반 전환</p></div><div class="media"><span>COMMERCE</span><b>Coupang · 11st · Gmarket · ABLY</b><p class="muted">플랫폼 내 구매 직전 수요 확보</p></div></div>
+<div class="quote">유입 → 관심 → 검색 → 구매</div></div></section>
+
+<section id="team" style="background:#F7FAFC"><span class="section-no">04 / 16</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>Senior-led<br><span class="em">Dedicated Team</span></h2><div class="team">
+<div class="person"><div class="yr">10Y</div><div class="name">재현 / 본부장</div><div class="role">EXECUTIVE LEAD</div><ul><li>전체 전략 총괄</li><li>KPI·예산 의사결정</li><li>주요 이슈 대응</li></ul></div>
+<div class="person"><div class="yr">5Y</div><div class="name">희성</div><div class="role">PERFORMANCE / GLOBAL</div><ul><li>Meta · Google</li><li>리타겟 배너</li><li>Amazon · Qoo10</li></ul></div>
+<div class="person"><div class="yr">5Y</div><div class="name">연아</div><div class="role">NAVER</div><ul><li>NAVER SA</li><li>NAVER GFA</li><li>검색·디스플레이 최적화</li></ul></div>
+<div class="person"><div class="yr">3Y</div><div class="name">명윤</div><div class="role">OPEN MARKET</div><ul><li>오픈마켓 운영</li><li>상품별 성과 분석</li><li>통합 리포팅</li></ul></div>
+<div class="person"><div class="yr">4Y</div><div class="name">상진</div><div class="role">RETAIL</div><ul><li>리테일 플랫폼</li><li>프로모션 운영</li><li>매출 확대 지원</li></ul></div>
+</div></div></section>
+
+<section id="model"><span class="section-no">05 / 16</span><div class="wrap"><div class="eyebrow">One Team, One KPI</div><h2>One Team.<br><span class="accent">One KPI.</span></h2><div class="flow"><div class="step"><small>01</small><h3>Acquire</h3><p class="muted">Meta · GFA · Viral로 신규 수요 형성</p></div><div class="arrow">→</div><div class="step"><small>02</small><h3>Capture</h3><p class="muted">NAVER · Google로 검색 수요 회수</p></div><div class="arrow">→</div><div class="step"><small>03</small><h3>Convert</h3><p class="muted">Commerce · Retargeting으로 구매 연결</p></div><div class="arrow">→</div><div class="step"><small>04</small><h3>Scale</h3><p class="muted">Winning SKU·Creative에 예산 재배분</p></div></div></div></section>
+
+<section id="health" style="background:#FBFCF8"><span class="section-no">06 / 16</span><div class="wrap"><div class="eyebrow">Health Supplement Experience</div><h2>건기식<br><span class="em">Reference</span></h2><div class="ref-zone"><div class="ref-title"><b>건기식 레퍼런스 삽입 영역</b><span>추후 실제 성과 이미지·수치로 교체</span></div><div class="placeholders"><div class="placeholder"><div><strong>CASE 01</strong>브랜드 / 매체 / 핵심 KPI</div></div><div class="placeholder"><div><strong>CASE 02</strong>성과 그래프 또는 대시보드</div></div><div class="placeholder"><div><strong>CASE 03</strong>운영 전후 개선 포인트</div></div></div></div></div></section>
+
+<section id="beauty"><span class="section-no">07 / 16</span><div class="wrap"><div class="eyebrow">Beauty & Skincare Experience</div><h2>Beauty<br><span class="accent">Reference</span></h2><div class="ref-zone"><div class="ref-title"><b>뷰티 레퍼런스 삽입 영역</b><span>이미지 3~6장 권장</span></div><div class="placeholders"><div class="placeholder"><div><strong>BEAUTY CASE 01</strong>캠페인 개요</div></div><div class="placeholder"><div><strong>BEAUTY CASE 02</strong>성과 이미지</div></div><div class="placeholder"><div><strong>BEAUTY CASE 03</strong>핵심 인사이트</div></div></div></div></div></section>
+
+<section id="creative" class="creative" style="background:#F7FAFC"><span class="section-no">08 / 16</span><div class="wrap"><div class="eyebrow">Creative Portfolio</div><h2>Creative<br><span class="em">Portfolio</span></h2><div class="ref-zone"><div class="ref-title"><b>광고 소재 포트폴리오</b><span>META · GFA · COMMERCE · BRANDING</span></div><div class="placeholders"><div class="placeholder"><div><strong>META</strong>Creative 01</div></div><div class="placeholder"><div><strong>NAVER GFA</strong>Creative 02</div></div><div class="placeholder"><div><strong>COMMERCE</strong>Creative 03</div></div><div class="placeholder"><div><strong>BRANDING</strong>Creative 04</div></div><div class="placeholder"><div><strong>UGC</strong>Creative 05</div></div><div class="placeholder"><div><strong>PROMOTION</strong>Creative 06</div></div></div></div></div></section>
+
+<section id="process"><span class="section-no">09 / 16</span><div class="wrap"><div class="eyebrow">Performance Optimization Loop</div><h2>Plan → Operate<br><span class="accent">→ Optimize</span></h2><div class="flow"><div class="step"><small>01 PLAN</small><h3>목표·KPI 정의</h3><p class="muted">매체별 역할·예산 설계</p></div><div class="arrow">→</div><div class="step"><small>02 SET-UP</small><h3>캠페인 세팅</h3><p class="muted">트래킹·소재·상품 구조화</p></div><div class="arrow">→</div><div class="step"><small>03 OPERATE</small><h3>일별 운영</h3><p class="muted">입찰·예산·타겟 조정</p></div><div class="arrow">→</div><div class="step"><small>04 OPTIMIZE</small><h3>분석·개선</h3><p class="muted">원인 진단 후 재배분</p></div></div></div></section>
+
+<section id="comm" style="background:#FBFCF8"><span class="section-no">10 / 16</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
+
+<section id="report"><span class="section-no">11 / 16</span><div class="wrap"><div class="eyebrow">Reporting & Action</div><h2>Report → Insight<br><span class="accent">→ Action</span></h2><div class="report-frame"><div class="report-top"><b>LinkPrice · AI Performance Report</b><span class="status">AI ANALYSIS ACTIVE</span></div><div class="kpis"><div class="kpi"><small>통합 광고비</small><strong>자동 집계</strong></div><div class="kpi"><small>ROAS / CPA</small><strong>이상징후 탐지</strong></div><div class="kpi"><small>상품 · 키워드</small><strong>원인 분석</strong></div><div class="kpi"><small>다음 액션</small><strong>개선안 제안</strong></div></div><div class="report-body"><div class="panel"><b>성과 추이</b><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="panel"><b>Report Cycle</b><p style="color:#A9BDD1;line-height:1.9">Daily · 모니터링<br>Weekly · 변화 공유<br>Monthly · 전략 리뷰</p></div></div></div></div></section>
+
+<section id="global" style="background:#F7FAFC"><span class="section-no">12 / 16</span><div class="wrap"><div class="eyebrow">Global Marketing Support</div><h2>Global<br><span class="em">Marketing</span></h2><div class="channels"><div class="channel"><strong>Google</strong><span class="muted">Search · Display · YouTube</span></div><div class="channel"><strong>Meta</strong><span class="muted">Global Acquisition · Conversion</span></div><div class="channel"><strong>Amazon</strong><span class="muted">Commerce Advertising</span></div><div class="channel"><strong>Qoo10</strong><span class="muted">Marketplace Advertising</span></div></div><div class="quote">Google · Meta · Amazon · Qoo10</div></div></section>
+
+<section id="viral"><span class="section-no">13 / 16</span><div class="wrap"><div class="eyebrow">Integrated Marketing</div><h2>Viral 30M<br><span class="accent">Content to Performance</span></h2><div class="grid"><div class="card c3"><div class="pill">INFLUENCER</div><h3>Influencer Marketing</h3><p class="muted">브랜드·제품 Fit 기반 크리에이터 협업</p></div><div class="card c3"><div class="pill">UGC</div><h3>UGC</h3><p class="muted">실사용 경험 중심 콘텐츠 확보</p></div><div class="card c3"><div class="pill">VIRAL</div><h3>Viral Marketing</h3><p class="muted">블로그·SNS·커뮤니티 확산</p></div><div class="card c3"><div class="pill">AFFILIATE</div><h3>Affiliate</h3><p class="muted">제휴 파트너 기반 성과형 확장</p></div></div><div class="flow"><div class="step"><small>CONTENT</small><h3>제작</h3></div><div class="arrow">→</div><div class="step"><small>RESPONSE</small><h3>반응 확인</h3></div><div class="arrow">→</div><div class="step"><small>WINNER</small><h3>우수 소재 발굴</h3></div><div class="arrow">→</div><div class="step"><small>PAID</small><h3>광고 확장</h3></div></div></div></section>
+
+<section id="commerce" style="background:#FBFCF8"><span class="section-no">14 / 16</span><div class="wrap"><div class="eyebrow">Commerce Performance</div><h2>Commerce<br><span class="em">Performance</span></h2><div class="channels"><div class="channel"><strong>COUPANG</strong><span class="muted">상품광고 · 매출최적화 · SKU별 ROAS</span></div><div class="channel"><strong>11STREET</strong><span class="muted">검색·전시 광고 · 프로모션</span></div><div class="channel"><strong>GMARKET / AUCTION</strong><span class="muted">상품 광고 · 행사 연계</span></div><div class="channel"><strong>ABLY</strong><span class="muted">플랫폼 광고 운영 지원</span></div></div><div class="quote">공식대행 · 오픈마켓 운영 지원</div></div></section>
+
+<section id="fee"><span class="section-no">15 / 16</span><div class="wrap"><div class="eyebrow">Fee Structure</div><h2>Fee<br><span class="accent">Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>협의</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>매체별 협의</td><td>집행 규모 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
+
+<section id="close" class="closing"><span class="section-no" style="color:rgba(255,255,255,.3)">16 / 16</span><div class="wrap"><div class="contact"><div><img class="hero-logo" src="assets/linkprice-logo.png" alt="LinkPrice"><div class="eyebrow" style="margin-top:44px">LINKPRICE</div><h2>Performance.<br><span style="color:#9AD8D5">Growth.</span></h2></div><div class="contact-card"><small>CONTACT</small><strong>정명윤 대리</strong><div class="contact-line">MOBILE · 010-2471-9893</div><div class="contact-line">EMAIL · jeongmy@linkprice.com</div><div class="contact-line">LINKPRICE · Integrated Marketing Proposal</div></div></div></div></section>
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('.nav a')];
+const sections=[...document.querySelectorAll('main section')];
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{threshold:.35});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
