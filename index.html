@@ -330,7 +330,84 @@ h2{font-size:66px;line-height:1.03}
 .media-table{margin-top:26px;border:1px solid var(--line);border-radius:24px;background:#fff;overflow:hidden}
 .media-row2{display:grid;grid-template-columns:180px 1fr;align-items:center;min-height:92px;border-top:1px solid #E7ECEF}
 .media-row2:first-child{border-top:0}
-.media-cat{padding:20px 22px;font-size:14px;font-weight:900;color:var(--navy)}
+
+/* v11 refinement */
+.media-cat{
+  padding:20px 22px;
+  font-size:14px;
+  font-weight:900;
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+  flex-wrap:nowrap;
+}
+.media-cat span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:0;
+  padding:5px 9px;
+  border-radius:999px;
+  background:var(--navy);
+  color:#fff;
+  font-size:8px;
+  letter-spacing:.08em;
+  flex:0 0 auto;
+}
+#naver-strategy .platform-card p,#google-strategy .platform-card p,#meta-strategy .platform-card p,
+#kakao-strategy .platform-card p,#coupang-strategy .platform-card p,#openmarket-strategy .platform-card p{
+  font-size:17px;
+  line-height:1.78;
+  color:#61707C;
+}
+#naver-strategy .platform-card h3,#google-strategy .platform-card h3,#meta-strategy .platform-card h3,
+#kakao-strategy .platform-card h3,#coupang-strategy .platform-card h3,#openmarket-strategy .platform-card h3{
+  font-size:28px;
+  line-height:1.22;
+}
+#naver-strategy .platform-card small,#google-strategy .platform-card small,#meta-strategy .platform-card small,
+#kakao-strategy .platform-card small,#coupang-strategy .platform-card small,#openmarket-strategy .platform-card small{
+  font-size:12px;
+  margin-bottom:9px;
+}
+#naver-strategy .rail-step b,#google-strategy .rail-step b,#coupang-strategy .rail-step b{
+  font-size:18px;
+}
+#naver-strategy .rail-step p,#google-strategy .rail-step p,#coupang-strategy .rail-step p{
+  font-size:15px;
+  line-height:1.7;
+}
+#retarget-strategy .strategy-item b,#integrated .strategy-item b{
+  font-size:17px;
+}
+#retarget-strategy .strategy-item span,#integrated .strategy-item span{
+  font-size:15px;
+  line-height:1.72;
+}
+#meta-strategy .strategy-footer,#kakao-strategy .strategy-footer,#openmarket-strategy .strategy-footer,
+#integrated .strategy-footer{
+  font-size:16px;
+}
+.portfolio-wrap{display:grid;gap:28px;margin-top:28px}
+.portfolio-block{border:1px solid var(--line);background:#fff;border-radius:24px;padding:26px}
+.portfolio-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:18px}
+.portfolio-head b{font-size:24px;color:var(--navy)}
+.portfolio-head span{font-size:11px;font-weight:900;letter-spacing:.08em;color:#7E8A95}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.portfolio-card{border:1px solid #E4EBEF;border-radius:18px;overflow:hidden;background:#FBFCFD}
+.portfolio-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eef3f6}
+.portfolio-card .cap{padding:14px 16px}
+.portfolio-card .cap b{display:block;font-size:14px;color:var(--navy);margin-bottom:5px}
+.portfolio-card .cap p{margin:0;font-size:12px;line-height:1.55;color:#74808B}
+@media(max-width:1100px){
+  .portfolio-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  .portfolio-grid{grid-template-columns:1fr}
+}
+
 .media-cat span{display:inline-flex;margin-left:8px;padding:5px 7px;border-radius:999px;background:var(--navy);color:#fff;font-size:8px;letter-spacing:.08em}
 .media-pills{display:flex;flex-wrap:wrap;gap:10px;padding:16px 20px}
 .media-pill{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid #DCE5EA;background:#F8FAFB;border-radius:999px;font-size:13px;font-weight:850;color:#344553}
@@ -611,24 +688,30 @@ h2{font-size:66px;line-height:1.03}
 
     <div class="case-hero">
       <div class="case-hero-top">
-        <div class="case-hero-title"><small>대표 레퍼런스 · META</small><h3>비포락토</h3></div>
+        <div class="case-hero-title"><small>대표 레퍼런스 · NAVER</small><h3>GNM 자연의품격</h3></div>
         <div class="case-badge">HEALTH · REPRESENTATIVE</div>
       </div>
       <div class="case-kpis">
-        <div class="case-kpi"><small>광고비</small><strong>2,800 → 3,100만원</strong><em>+10.7%</em></div>
-        <div class="case-kpi"><small>광고매출</small><strong>9,800 → 11,500만원</strong><em>+17.3%</em></div>
-        <div class="case-kpi"><small>ROAS</small><strong>350% → 371%</strong><em>+21%p</em></div>
-        <div class="case-kpi"><small>객단가</small><strong>약 4.6만원</strong><em>전환 볼륨 확대</em></div>
+        <div class="case-kpi"><small>광고비</small><strong>1.85 → 2.01억원</strong><em>+8.6%</em></div>
+        <div class="case-kpi"><small>광고매출</small><strong>8.86 → 9.85억원</strong><em>+11.2%</em></div>
+        <div class="case-kpi"><small>ROAS</small><strong>479% → 491%</strong><em>+12%p</em></div>
+        <div class="case-kpi"><small>전환수</small><strong>30,412 → 31,996</strong><em>+5.2%</em></div>
       </div>
       <div class="before-after">
-        <div class="ba-box"><small>대행 전</small><strong>ROAS 350%</strong><p class="muted">광고매출 9,800만원</p></div>
+        <div class="ba-box"><small>대행 전</small><strong>ROAS 479%</strong><p class="muted">광고매출 8.86억</p></div>
         <div class="ba-arrow">→</div>
-        <div class="ba-box"><small>대행 후</small><strong>ROAS 371%</strong><p class="muted">광고매출 1억 1,500만원</p></div>
+        <div class="ba-box"><small>대행 후</small><strong>ROAS 491%</strong><p class="muted">광고매출 9.85억</p></div>
       </div>
-      <div class="case-note">광고비를 급격하게 확대하지 않고, 전환 우수 타겟·소재 중심으로 예산을 이동해 매출과 효율을 함께 개선.</div>
+      <div class="case-note">브랜드검색·파워링크·쇼핑검색·GFA를 역할별로 분리 운영해 Hero SKU 매출을 유지하면서도 검색 수요와 디스플레이 전환을 함께 확대한 NAVER 중심 운영 사례입니다.</div>
     </div>
 
     <div class="ref-strip">
+      <div class="ref-mini">
+        <div class="ref-top"><b>비포락토</b><span>META</span></div>
+        <div class="pair"><div><small>대행 전</small><strong>ROAS 350%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 371%</strong></div></div>
+        <div class="pair"><div><small>광고매출</small><strong>9,800만원</strong></div><i>→</i><div><small>광고매출</small><strong>1억 1,500만원</strong></div></div>
+        <p>전환 우수 타겟·소재 중심으로 예산을 재배분해 매출과 효율을 동반 개선.</p>
+      </div>
       <div class="ref-mini">
         <div class="ref-top"><b>뉴트라랩</b><span>COUPANG</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 278%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 303%</strong></div></div>
@@ -639,16 +722,10 @@ h2{font-size:66px;line-height:1.03}
         <div class="ref-top"><b>모비타</b><span>NAVER</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 292%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 298%</strong></div></div>
         <div class="pair"><div><small>광고매출</small><strong>1.53억</strong></div><i>→</i><div><small>광고매출</small><strong>1.71억</strong></div></div>
-        <p>브랜드검색·쇼핑검색·파워링크 역할을 분리해 검색 수요 회수 효율 개선.</p>
-      </div>
-      <div class="ref-mini">
-        <div class="ref-top"><b>닥터라인</b><span>META</span></div>
-        <div class="pair"><div><small>대행 전</small><strong>ROAS 340%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 360%</strong></div></div>
-        <div class="pair"><div><small>광고매출</small><strong>7,480만원</strong></div><i>→</i><div><small>광고매출</small><strong>8,820만원</strong></div></div>
-        <p>객단가 약 39,394원 기준. 예산을 소폭 확대하며 전환 볼륨과 효율을 동반 개선.</p>
+        <p>브랜드검색·쇼핑검색·파워링크 역할을 분리해 검색 수요 회수 효율을 안정화.</p>
       </div>
     </div>
-    <div class="rep-note">※ 제공 자료 기반 전·후 구간 재구성 및 일부 제안서용 시나리오 수치 포함.</div>
+    <div class="rep-note">※ GNM 자연의품격 대표 수치는 제공 이미지의 채널 구성과 예산 규모를 기준으로 제안서용 전·후 구간으로 재구성했습니다.</div>
   </div>
 </section>
 
@@ -945,7 +1022,56 @@ h2{font-size:66px;line-height:1.03}
   </div>
 </section>
 
-<section id="creative" class="creative" style="background:#F7FAFC"><span class="section-no">20 / 25</span><div class="wrap"><div class="eyebrow">Creative Portfolio</div><h2>Creative<br><span class="em">Portfolio</span></h2><div class="ref-zone"><div class="ref-title"><b>광고 소재 포트폴리오</b><span>META · GFA · COMMERCE · BRANDING</span></div><div class="placeholders"><div class="placeholder"><div><strong>META</strong>Creative 01</div></div><div class="placeholder"><div><strong>NAVER GFA</strong>Creative 02</div></div><div class="placeholder"><div><strong>COMMERCE</strong>Creative 03</div></div><div class="placeholder"><div><strong>BRANDING</strong>Creative 04</div></div><div class="placeholder"><div><strong>UGC</strong>Creative 05</div></div><div class="placeholder"><div><strong>PROMOTION</strong>Creative 06</div></div></div></div></div></section>
+<section id="creative" class="creative" style="background:#F7FAFC">
+  <span class="section-no">20 / 25</span>
+  <div class="wrap">
+    <div class="eyebrow">Creative Portfolio</div>
+    <h2>Creative<br><span class="em">Portfolio</span></h2>
+    <div class="portfolio-wrap">
+      <div class="portfolio-block">
+        <div class="portfolio-head">
+          <b>건기식 소재 레퍼런스</b>
+          <span>MODEL-BASED · PERFORMANCE CREATIVE</span>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <img src="assets/health_model_1.jpg" alt="건기식 소재 1">
+            <div class="cap"><b>뉴트리디데이 · 모델 활용형</b><p>제품 USP와 프로모션 혜택을 모델 컷과 함께 직관적으로 전달하는 상세형 소재.</p></div>
+          </div>
+          <div class="portfolio-card">
+            <img src="assets/health_model_2.jpg" alt="건기식 소재 2">
+            <div class="cap"><b>이너뷰티 · 시즌 프로모션형</b><p>브랜드 컬러와 대형 카피를 결합해 구매 유도 메시지를 강하게 노출하는 구조.</p></div>
+          </div>
+          <div class="portfolio-card">
+            <img src="assets/health_model_3.jpg" alt="건기식 소재 3">
+            <div class="cap"><b>홀리데이즈 · 오퍼 강조형</b><p>모델, 제품, 혜택 배지를 함께 배치해 전환 목적에 적합한 커머스형 크리에이티브.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-block">
+        <div class="portfolio-head">
+          <b>뷰티 소재 레퍼런스</b>
+          <span>MODEL-BASED · BRAND + PERFORMANCE</span>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <img src="assets/beauty_model_1.jpg" alt="뷰티 소재 1">
+            <div class="cap"><b>비플레인 · 브랜드/행사형</b><p>모델 컷과 상품 비주얼, 가격 메시지를 함께 배치해 브랜드감과 프로모션 전달력을 모두 확보.</p></div>
+          </div>
+          <div class="portfolio-card">
+            <img src="assets/beauty_model_2.jpg" alt="뷰티 소재 2">
+            <div class="cap"><b>컬러 메이크업 · 효능 비교형</b><p>사용 컷과 컬러 스와치를 함께 노출해 제품 사용감을 빠르게 이해시키는 구조.</p></div>
+          </div>
+          <div class="portfolio-card">
+            <img src="assets/beauty_model_3.jpg" alt="뷰티 소재 3">
+            <div class="cap"><b>스킨케어 · 기능성 소구형</b><p>모델 피부 표현과 원료 이미지를 결합해 제품 효능 포인트를 명확히 전달하는 소재.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="report"><span class="section-no">21 / 25</span><div class="wrap"><div class="eyebrow">Self-developed Reporting</div><h2>자체개발<br><span class="accent">성과 대시보드</span></h2><div class="report-gallery"><div class="report-shot"><img src="assets/report-dashboard.png" alt="LinkPrice SA 성과 대시보드"><div class="report-caption"><b>성과 대시보드</b><span>KPI · 캠페인 유형별 분석</span></div></div><div class="report-shot"><img src="assets/report-product.png" alt="LinkPrice 상품별 성과 대시보드"><div class="report-caption"><b>상품별 데이터</b><span>모델별 매출 비중 · CVR · ROAS</span></div></div></div><div class="grid" style="margin-top:18px"><div class="card c4"><div class="pill">DAILY</div><h3>상시 모니터링</h3><p class="muted">소진 · ROAS · CPC · CVR 이상징후 확인</p></div><div class="card c4"><div class="pill">WEEKLY</div><h3>성과 변화 공유</h3><p class="muted">캠페인 · 상품 · 키워드 단위 변화 정리</p></div><div class="card c4 brand"><div class="pill">MONTHLY</div><h3>액션 플랜</h3><p class="muted">성과 원인 분석 → 예산·입찰·소재 개선</p></div></div></div></section>
 
@@ -953,7 +1079,7 @@ h2{font-size:66px;line-height:1.03}
 
 <section id="comm" style="background:#FBFCF8"><span class="section-no">23 / 25</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
 
-<section id="fee"><span class="section-no">24 / 25</span><div class="wrap"><div class="eyebrow">Fee Structure</div><h2>Fee<br><span class="accent">Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>협의</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>매체별 협의</td><td>집행 규모 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
+<section id="fee"><span class="section-no">24 / 25</span><div class="wrap"><div class="eyebrow">Fee Structure</div><h2>Fee<br><span class="accent">Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>공식대행 구조</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>공식대행 구조</td><td>집행 규모 기준 협의</td></tr><tr><td>11번가 / G마켓 / ABLY</td><td>공식대행 구조</td><td>통합 운영 범위 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
 
 <section id="close" class="closing">
   <span class="section-no" style="color:rgba(255,255,255,.3)">25 / 25</span>
