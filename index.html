@@ -494,6 +494,91 @@ h2{font-size:66px;line-height:1.03}
 
 @media(max-width:1100px){.team{grid-template-columns:repeat(2,1fr)}.strategy-grid{grid-template-columns:repeat(2,1fr)}.case-cols,.report-gallery{grid-template-columns:1fr}.media-grid,.channels{grid-template-columns:repeat(2,1fr)}.placeholders{grid-template-columns:repeat(2,1fr)}.budget-board,.report-body,.contact{grid-template-columns:1fr}.c3{grid-column:span 6}.hero-metrics{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.support-team{grid-template-columns:1fr}.strategy-grid{grid-template-columns:1fr}.sidebar{display:none}.main{margin-left:0;width:100%}section{min-height:auto;padding:70px 24px}.grid{grid-template-columns:1fr}.c3,.c4,.c6,.c8,.c12{grid-column:auto}.media-grid,.team,.channels,.placeholders,.hero-metrics{grid-template-columns:1fr}.flow{display:grid}.flow .arrow{transform:rotate(90deg);text-align:center}.hero-top{margin-bottom:48px}}
+
+/* v13 legibility refinement */
+:root{
+  --text-strong:#243746;
+  --text-body:#5A6B79;
+  --text-light:#EAF3F7;
+}
+body{color:var(--text-strong)}
+.muted,.rep-note,.company-note,.store-proof-note{font-size:13px !important; line-height:1.75 !important; color:#758390 !important;}
+p{word-break:keep-all}
+.media-pill{font-size:15px !important; font-weight:900 !important;}
+.media-cat{font-size:18px !important; align-items:center !important;}
+.media-cat span{font-size:10px !important; padding:6px 10px !important;}
+.overview-kpi p,.company-kpi p,.business-card p,.placeholder p,.hero-product span,
+.ref-mini p,.portfolio-card .cap p,.channel p,.support-box span,.member span,
+.sku-summary,.case-note,.strategy-footer,.quote,.process-step p,.time p,.fee-card p{
+  font-size:15px !important;
+  line-height:1.78 !important;
+  color:var(--text-body) !important;
+}
+.overview-kpi small,.company-kpi small,.ref-mini .pair small,.portfolio-head span,
+.case-kpi small,.platform-card small,.business-card .tag,.member small,.channel small,
+.strategy-panel .sub,.eyebrow,.media-role,.rail-step small,.team-group .yr,.store-proof-note{
+  font-size:12px !important;
+  line-height:1.5 !important;
+}
+.overview-kpi strong,.company-kpi strong,.case-kpi strong,.ref-mini .pair strong,
+.portfolio-card .cap b,.hero-product b,.media-card h3,.platform-card h3,
+.strategy-panel h3,.business-card h3,.compare-row b,.process-step h3,.time h4{
+  color:var(--text-strong) !important;
+}
+.case-hero-title h3{font-size:34px !important;}
+.ref-mini .ref-top b{font-size:22px !important;}
+.ref-mini .pair strong{font-size:18px !important;}
+.ref-mini .pair div{padding:14px !important;}
+.portfolio-card .cap b{font-size:18px !important; line-height:1.4 !important;}
+.portfolio-card .cap p{font-size:14px !important;}
+#naver-strategy .platform-card p,#google-strategy .platform-card p,#meta-strategy .platform-card p,
+#kakao-strategy .platform-card p,#coupang-strategy .platform-card p,#openmarket-strategy .platform-card p{
+  font-size:18px !important;
+  line-height:1.85 !important;
+  color:#4E6070 !important;
+}
+#naver-strategy .platform-card h3,#google-strategy .platform-card h3,#meta-strategy .platform-card h3,
+#kakao-strategy .platform-card h3,#coupang-strategy .platform-card h3,#openmarket-strategy .platform-card h3{
+  font-size:30px !important;
+}
+#naver-strategy .rail-step b,#google-strategy .rail-step b,#coupang-strategy .rail-step b{
+  font-size:20px !important;
+}
+#naver-strategy .rail-step p,#google-strategy .rail-step p,#coupang-strategy .rail-step p{
+  font-size:16px !important;
+  line-height:1.8 !important;
+  color:#5B6D7A !important;
+}
+#meta-strategy .strategy-footer,#kakao-strategy .strategy-footer,#openmarket-strategy .strategy-footer,
+#integrated .strategy-footer,#retarget-strategy .strategy-footer{
+  font-size:16px !important;
+  line-height:1.75 !important;
+}
+#retarget-strategy .strategy-item b,#integrated .strategy-item b{
+  font-size:18px !important;
+}
+#retarget-strategy .strategy-item span,#integrated .strategy-item span{
+  font-size:16px !important;
+  line-height:1.8 !important;
+  color:#5C6E7C !important;
+}
+.platform-card.dark p,.platform-card.dark h3,.platform-card.dark small,
+#meta-strategy .platform-card.dark p,#meta-strategy .platform-card.dark h3,
+#kakao-strategy .platform-card.dark p,#kakao-strategy .platform-card.dark h3,
+#openmarket-strategy .platform-card.dark p,#openmarket-strategy .platform-card.dark h3,
+#coupang-strategy .platform-card.dark p,#coupang-strategy .platform-card.dark h3{
+  color:#F3F9FC !important;
+}
+.platform-card.dark p{opacity:1 !important;}
+.portfolio-card img{
+  image-rendering:auto;
+  object-fit:cover;
+}
+
+
+.portfolio-card img{aspect-ratio:1/1; width:100%; height:auto; max-height:none;}
+.portfolio-card .cap{padding:16px 18px !important;}
+
 </style>
 </head>
 <body>
@@ -1060,11 +1145,11 @@ h2{font-size:66px;line-height:1.03}
             <div class="cap"><b>비플레인 · 브랜드/행사형</b><p>모델 컷과 상품 비주얼, 가격 메시지를 함께 배치해 브랜드감과 프로모션 전달력을 모두 확보.</p></div>
           </div>
           <div class="portfolio-card">
-            <img src="assets/beauty_model_2.jpg" alt="뷰티 소재 2">
+            <img src="assets/beauty_model_2_hd.jpg" alt="뷰티 소재 2">
             <div class="cap"><b>컬러 메이크업 · 효능 비교형</b><p>사용 컷과 컬러 스와치를 함께 노출해 제품 사용감을 빠르게 이해시키는 구조.</p></div>
           </div>
           <div class="portfolio-card">
-            <img src="assets/beauty_model_3.jpg" alt="뷰티 소재 3">
+            <img src="assets/beauty_model_3_hd.jpg" alt="뷰티 소재 3">
             <div class="cap"><b>스킨케어 · 기능성 소구형</b><p>모델 피부 표현과 원료 이미지를 결합해 제품 효능 포인트를 명확히 전달하는 소재.</p></div>
           </div>
         </div>
