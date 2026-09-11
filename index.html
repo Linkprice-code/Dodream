@@ -662,6 +662,138 @@ p{word-break:keep-all}
   .viral-kpis,.viral-process,.crm-flow{grid-template-columns:1fr}
 }
 
+
+/* v16 consistency + readability */
+:root{
+  --body-size:16px;
+  --small-size:13px;
+}
+body{font-size:var(--body-size);}
+p,.muted,.member span,.support-box span,.case-note,.sku-summary,
+.platform-card p,.strategy-item span,.rail-step p,.viral-page-card p,
+.viral-process-step span,.viral-metric span,.crm-step span,.portfolio-card .cap p{
+  font-size:16px !important;
+  line-height:1.78 !important;
+  word-break:keep-all;
+}
+small,.eyebrow,.pill,.media-role,.ref-top span,.portfolio-head span{
+  font-size:12px !important;
+}
+.case-kpi strong{
+  font-size:26px !important;
+  line-height:1.2 !important;
+  white-space:nowrap;
+}
+.case-kpi small{font-size:12px !important;}
+#beauty .case-kpi:first-child strong{font-size:24px !important;}
+#naver-strategy .platform-card p{
+  font-size:18px !important;
+  line-height:1.82 !important;
+}
+#naver-strategy .platform-card{
+  min-height:330px !important;
+}
+#naver-strategy .platform-card p br{display:block;}
+#naver-strategy .platform-card.dark p{
+  color:#fff !important;
+  opacity:1 !important;
+}
+.support-team{grid-template-columns:repeat(3,1fr) !important;}
+.search-demand{
+  margin-top:22px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff;
+  padding:24px;
+}
+.search-demand-head{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:flex-end;
+  margin-bottom:18px;
+}
+.search-demand-head b{font-size:22px;color:var(--navy);}
+.search-demand-head span{font-size:11px;font-weight:900;color:#7D8A95;letter-spacing:.08em;}
+.search-keywords{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.search-keyword{
+  border-radius:16px;
+  background:#F4F8F9;
+  padding:18px;
+  min-height:112px;
+}
+.search-keyword small{display:block;color:var(--cyan);font-weight:900;margin-bottom:7px;}
+.search-keyword b{display:block;color:var(--navy);font-size:18px;margin-bottom:6px;}
+.search-keyword span{font-size:13px;line-height:1.55;color:#6F7D89;}
+.search-demand-note{
+  margin-top:14px;
+  border-radius:14px;
+  padding:14px 16px;
+  background:#EEF7F4;
+  font-size:13px;
+  line-height:1.7;
+  color:#40615F;
+  font-weight:800;
+}
+.live-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:26px;
+}
+.live-card{
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff;
+  padding:26px;
+  min-height:290px;
+}
+.live-card small{display:block;font-size:11px;font-weight:900;letter-spacing:.1em;color:var(--cyan);margin-bottom:8px;}
+.live-card h3{font-size:25px;color:var(--navy);margin:0 0 12px;}
+.live-card p{font-size:16px;line-height:1.8;color:#596B79;margin:0;}
+.live-flow{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:20px;
+}
+.live-step{
+  padding:16px;
+  border-radius:15px;
+  background:#F4F8F9;
+  border:1px solid #E4EAEE;
+  min-height:120px;
+}
+.live-step b{display:block;font-size:14px;color:var(--navy);margin-bottom:6px;}
+.live-step span{display:block;font-size:12px;line-height:1.6;color:#72808D;}
+#close h2{
+  font-size:94px !important;
+  line-height:.98 !important;
+  letter-spacing:-.04em;
+}
+#close .lead{
+  font-size:26px !important;
+  line-height:1.5 !important;
+  margin-top:22px;
+}
+#close .eyebrow{font-size:14px !important;}
+#close .hero-logo{max-width:210px !important;}
+@media(max-width:1100px){
+  .support-team{grid-template-columns:1fr 1fr !important;}
+  .search-keywords{grid-template-columns:1fr 1fr;}
+  .live-grid{grid-template-columns:1fr 1fr;}
+  .live-flow{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:700px){
+  .support-team,.search-keywords,.live-grid,.live-flow{grid-template-columns:1fr !important;}
+  .case-kpi strong{white-space:normal;}
+  #close h2{font-size:58px !important;}
+}
+
 </style>
 </head>
 <body>
@@ -693,15 +825,16 @@ p{word-break:keep-all}
 <a href="#viral-overview">20. 바이럴 개요</a>
 <a href="#viral-influencer">21. 인플루언서</a>
 <a href="#viral-content">22. UGC · 리뷰</a>
-<a href="#viral-traffic">23. 외부 트래픽</a>
-<a href="#viral-report">24. 바이럴 리포트</a>
-<a href="#viral-crm">25. Paid · CRM 연결</a>
-<a href="#creative">26. 소재 포트폴리오</a>
-<a href="#report">27. 성과 보고</a>
-<a href="#process">28. 업무 프로세스</a>
-<a href="#comm">29. 커뮤니케이션</a>
-<a href="#fee">30. 수수료</a>
-<a href="#close">31. Closing</a>
+<a href="#viral-live">23. 라이브커머스</a>
+<a href="#viral-traffic">24. 외부 트래픽</a>
+<a href="#viral-report">25. 바이럴 리포트</a>
+<a href="#viral-crm">26. Paid · CRM 연결</a>
+<a href="#creative">27. 소재 포트폴리오</a>
+<a href="#report">28. 성과 보고</a>
+<a href="#process">29. 업무 프로세스</a>
+<a href="#comm">30. 커뮤니케이션</a>
+<a href="#fee">31. 수수료</a>
+<a href="#close">32. Closing</a>
 </nav>
   <div class="side-budget"><span>MONTHLY MARKETING BUDGET</span><strong>₩300M</strong><span>Performance 270M · Viral 30M</span></div>
 </aside>
@@ -715,7 +848,7 @@ p{word-break:keep-all}
 
 
 <section id="company-profile" style="background:#F7FAFC">
-  <span class="section-no">02 / 31</span>
+  <span class="section-no">02 / 32</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · COMPANY</div>
     <h2>26년의 운영 경험,<br><span class="em">성과로 증명합니다.</span></h2>
@@ -743,7 +876,7 @@ p{word-break:keep-all}
 
 
 <section id="company-business">
-  <span class="section-no">03 / 31</span>
+  <span class="section-no">03 / 32</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · BUSINESS</div>
     <h2>Performance에서<br><span class="accent">Commerce까지</span></h2>
@@ -776,7 +909,7 @@ p{word-break:keep-all}
 
 
 <section id="company-strength" style="background:#FBFCF8">
-  <span class="section-no">04 / 31</span>
+  <span class="section-no">04 / 32</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · COMPETITIVENESS</div>
     <h2>운영 네트워크와<br><span class="em">재무 안정성</span></h2>
@@ -801,7 +934,7 @@ p{word-break:keep-all}
 
 
 <section id="company-media">
-  <span class="section-no">05 / 31</span>
+  <span class="section-no">05 / 32</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · MEDIA COVERAGE</div>
     <h2>주요 광고 <span class="accent">매체</span></h2>
@@ -833,7 +966,7 @@ p{word-break:keep-all}
 
 
 <section id="overview" style="background:#FBFCF8">
-  <span class="section-no">06 / 31</span>
+  <span class="section-no">06 / 32</span>
   <div class="wrap">
     <div class="eyebrow">Proposal Overview</div>
     <h2>제안 <span class="accent">Overview</span></h2>
@@ -850,12 +983,12 @@ p{word-break:keep-all}
   </div>
 </section>
 
-<section id="budget"><span class="section-no">07 / 31</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
+<section id="budget"><span class="section-no">07 / 32</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
 <div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW / month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW / month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
 <div class="splitbar"><i></i><i></i></div><p class="muted">Performance 90% · Viral 10% / 총 월 3억원 기준</p></div></section>
 
 <section id="health" style="background:#FBFCF8;align-items:flex-start">
-  <span class="section-no">08 / 31</span>
+  <span class="section-no">08 / 32</span>
   <div class="wrap">
     <div class="eyebrow">Health Supplement Reference</div>
     <h2>건기식 <span class="em">Reference</span></h2>
@@ -904,7 +1037,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="beauty" style="align-items:flex-start">
-  <span class="section-no">09 / 31</span>
+  <span class="section-no">09 / 32</span>
   <div class="wrap">
     <div class="eyebrow">Beauty & Skincare Reference</div>
     <h2>Beauty <span class="accent">Reference</span></h2>
@@ -915,7 +1048,7 @@ p{word-break:keep-all}
         <div class="case-badge">BEAUTY · REPRESENTATIVE</div>
       </div>
       <div class="case-kpis">
-        <div class="case-kpi"><small>SA 광고비</small><strong>8,649 → 8,942만원</strong><em>+3.4%</em></div>
+        <div class="case-kpi"><small>SA 광고비</small><strong>8,649만원 → 8,942만원</strong><em>+3.4%</em></div>
         <div class="case-kpi"><small>SA 매출</small><strong>7.56 → 10.48억</strong><em>+38.7%</em></div>
         <div class="case-kpi"><small>SA ROAS</small><strong>874% → 1,172%</strong><em>+298%p</em></div>
         <div class="case-kpi"><small>전환수</small><strong>24,142 → 35,551</strong><em>+47.3%</em></div>
@@ -951,10 +1084,10 @@ p{word-break:keep-all}
   </div>
 </section>
 
-<section id="team" style="background:#F7FAFC"><span class="section-no">10 / 31</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div></div></div></section>
+<section id="team" style="background:#F7FAFC"><span class="section-no">10 / 32</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div><div class="support-box"><b>LIVE TEAM</b><span>라이브 기획 · 큐시트 · 쇼호스트 · 송출 · 방송 후 리포트 지원</span></div></div></div></section>
 
 <section id="product-strategy" style="background:#FBFCF8">
-  <span class="section-no">11 / 31</span>
+  <span class="section-no">11 / 32</span>
   <div class="wrap">
     <div class="eyebrow">SKU Portfolio Strategy</div>
     <h2>Hero SKU<br><span class="accent">× Growth SKU</span></h2>
@@ -1006,15 +1139,24 @@ p{word-break:keep-all}
       </div>
     </div>
 
-    <div class="store-proof">
-      <img src="assets/dodream-store-ranking.png" alt="두드림 브랜드스토어 판매 많은 순">
-      <div class="store-proof-note">두드림 브랜드스토어 · 판매 많은 순 화면 기준</div>
+    <div class="search-demand">
+      <div class="search-demand-head">
+        <b>발효효소 검색 수요 분석</b>
+        <span>NAVER DATALAB 활용</span>
+      </div>
+      <div class="search-keywords">
+        <div class="search-keyword"><small>CORE</small><b>발효효소</b><span>대표 Hero SKU 연관 핵심 수요</span></div>
+        <div class="search-keyword"><small>INGREDIENT</small><b>카무트 효소</b><span>원료 관심 기반 세부 수요</span></div>
+        <div class="search-keyword"><small>NEED</small><b>소화 효소</b><span>기능·니즈형 검색 수요</span></div>
+        <div class="search-keyword"><small>EXPAND</small><b>곡물 효소</b><span>연관 카테고리 확장 키워드</span></div>
+      </div>
+      <div class="search-demand-note">판매 순 화면을 보여주기보다, 실제 운영 시 DataLab에서 발효효소 카테고리의 검색 추이·시즌성·연관어를 확인해 SA 키워드 확장과 GFA 신규 모수 전략에 연결합니다.</div>
     </div>
   </div>
 </section>
 
 <section id="naver-strategy">
-  <span class="section-no">12 / 31</span>
+  <span class="section-no">12 / 32</span>
   <div class="wrap">
     <div class="eyebrow">NAVER STRATEGY</div>
     <h2>NAVER<br><span class="em">SA · GFA · BSA</span></h2>
@@ -1023,7 +1165,7 @@ p{word-break:keep-all}
 <div class="platform-grid">
   <div class="platform-card">
     <small>SA · SEARCH</small><h3>키워드 조합 운영</h3>
-    <p>메인 · 브랜드 · 기능 · 원료 · 롱테일 키워드를 의도별로 분리.<br>전환율·CPC·검색량 기준으로 입찰과 예산을 주 단위 조정.</p>
+    <p>메인 · 브랜드 · 기능 · 원료 · 롱테일<br>키워드를 검색 의도별로 분리 운영.<br><br>전환율 · CPC · 검색량을 기준으로<br>입찰과 예산을 주 단위로 조정.</p>
   </div>
   <div class="platform-card">
     <small>GFA · DISPLAY</small><h3>캠페인 유형별 역할 분리</h3>
@@ -1045,7 +1187,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="google-strategy" style="background:#F7FAFC">
-  <span class="section-no">13 / 31</span>
+  <span class="section-no">13 / 32</span>
   <div class="wrap">
     <div class="eyebrow">GOOGLE STRATEGY</div>
     <h2>Google<br><span class="accent">P.Max 중심</span></h2>
@@ -1066,7 +1208,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="meta-strategy">
-  <span class="section-no">14 / 31</span>
+  <span class="section-no">14 / 32</span>
   <div class="wrap">
     <div class="eyebrow">META STRATEGY</div>
     <h2>META<br><span class="em">ABO Performance</span></h2>
@@ -1082,7 +1224,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="kakao-strategy" style="background:#FBFCF8">
-  <span class="section-no">15 / 31</span>
+  <span class="section-no">15 / 32</span>
   <div class="wrap">
     <div class="eyebrow">KAKAO STRATEGY</div>
     <h2>KAKAO<br><span class="accent">3-Campaign</span></h2>
@@ -1099,7 +1241,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="retarget-strategy">
-  <span class="section-no">16 / 31</span>
+  <span class="section-no">16 / 32</span>
   <div class="wrap">
     <div class="eyebrow">RETARGETING STRATEGY</div>
     <h2>Mobon × <span class="em">Criteo</span></h2>
@@ -1129,7 +1271,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="coupang-strategy" style="background:#F7FAFC">
-  <span class="section-no">17 / 31</span>
+  <span class="section-no">17 / 32</span>
   <div class="wrap">
     <div class="eyebrow">COUPANG STRATEGY</div>
     <h2>COUPANG<br><span class="accent">SKU 중심 운영</span></h2>
@@ -1150,7 +1292,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="openmarket-strategy">
-  <span class="section-no">18 / 31</span>
+  <span class="section-no">18 / 32</span>
   <div class="wrap">
     <div class="eyebrow">OPEN MARKET STRATEGY</div>
     <h2>11ST · GMARKET · <span class="em">ABLY</span></h2>
@@ -1166,7 +1308,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="integrated" style="background:#FBFCF8">
-  <span class="section-no">19 / 31</span>
+  <span class="section-no">19 / 32</span>
   <div class="wrap">
     <div class="eyebrow">GLOBAL EXPANSION</div>
     <h2>Global<br><span class="accent">Expansion</span></h2>
@@ -1193,7 +1335,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="viral-overview" style="background:#F7FAFC">
-  <span class="section-no">20 / 31</span>
+  <span class="section-no">20 / 32</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL · 30M</div>
     <h2>Viral<br><span class="accent">Framework</span></h2>
@@ -1209,7 +1351,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="viral-influencer">
-  <span class="section-no">21 / 31</span>
+  <span class="section-no">21 / 32</span>
   <div class="wrap">
     <div class="eyebrow">INFLUENCER MARKETING</div>
     <h2>Influencer<br><span class="em">ALL IN ONE</span></h2>
@@ -1229,7 +1371,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="viral-content" style="background:#FBFCF8">
-  <span class="section-no">22 / 31</span>
+  <span class="section-no">22 / 32</span>
   <div class="wrap">
     <div class="eyebrow">CONTENT SEEDING</div>
     <h2>Review × <span class="accent">UGC</span></h2>
@@ -1237,14 +1379,37 @@ p{word-break:keep-all}
     <div class="viral-page-grid">
       <div class="viral-page-card"><small>REELS</small><h3>짧고 강한 사용 경험</h3><p>광고주 요청 메시지를 반영한 릴스 콘텐츠로 제품 사용 장면과 핵심 USP를 빠르게 노출합니다.</p></div>
       <div class="viral-page-card"><small>BLOG</small><h3>검색형 리뷰 자산</h3><p>제품 정보와 사용 후기를 충분히 설명할 수 있는 리뷰 콘텐츠를 확보해 검색 접점을 확장합니다.</p></div>
-      <div class="viral-page-card"><small>VOLUME</small><h3>대량 콘텐츠 확보</h3><p>체험단 구조를 활용해 여러 사용 맥락과 메시지를 동시에 테스트하고 콘텐츠 풀을 빠르게 확보합니다.</p></div>
+      <div class="viral-page-card"><small>TRIAL GROUP</small><h3>블로그 · 릴스 체험단</h3><p>다수의 실제 사용 후기를 확보해 제품별 사용 맥락과 반응 메시지를 비교하고, 검색·SNS에 활용할 리뷰 자산을 빠르게 축적합니다.</p></div>
       <div class="viral-page-card dark"><small>SEARCH EXPOSURE</small><h3>해시태그·검색 노출</h3><p>채널 특성에 맞춘 리뷰와 해시태그를 활용해 광고 외 자연 노출과 브랜드 검색 접점을 함께 늘립니다.</p></div>
     </div>
   </div>
 </section>
 
+<section id="viral-live" style="background:#F7FAFC">
+  <span class="section-no">23 / 32</span>
+  <div class="wrap">
+    <div class="eyebrow">LIVE COMMERCE</div>
+    <h2>Live<br><span class="accent">Commerce</span></h2>
+    <p class="lead">단순 송출이 아니라 상품 분석 → 방송 기획 → 사전 유입 → 실시간 운영 → 성과 피드백까지 연결합니다.</p>
+
+    <div class="live-grid">
+      <div class="live-card"><small>01 PLANNING</small><h3>상품 맞춤 방송 기획</h3><p>상품 USP와 프로모션을 기준으로 방송 콘셉트·큐시트·스크립트를 설계하고, 핵심 소구가 반복 노출되도록 구성합니다.</p></div>
+      <div class="live-card"><small>02 OPERATION</small><h3>전문 진행 · 송출</h3><p>쇼호스트·촬영·송출 환경을 사전에 점검하고, 방송 중 시청자 반응과 구매 흐름을 실시간으로 관리합니다.</p></div>
+      <div class="live-card"><small>03 TRAFFIC</small><h3>사전 바이럴 · 외부 유입</h3><p>방송 전 콘텐츠·배너·외부 채널을 활용해 초기 시청자를 확보하고, 라이브 초반 반응을 집중시킵니다.</p></div>
+    </div>
+
+    <div class="live-flow">
+      <div class="live-step"><b>STEP 01</b><span>상품 분석</span></div>
+      <div class="live-step"><b>STEP 02</b><span>방송 기획</span></div>
+      <div class="live-step"><b>STEP 03</b><span>사전 준비</span></div>
+      <div class="live-step"><b>STEP 04</b><span>라이브 운영</span></div>
+      <div class="live-step"><b>STEP 05</b><span>성과 피드백</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="viral-traffic">
-  <span class="section-no">23 / 31</span>
+  <span class="section-no">24 / 32</span>
   <div class="wrap">
     <div class="eyebrow">EXTERNAL TRAFFIC</div>
     <h2>Traffic<br><span class="em">Boosting</span></h2>
@@ -1259,7 +1424,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="viral-report" style="background:#F7FAFC">
-  <span class="section-no">24 / 31</span>
+  <span class="section-no">25 / 32</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL REPORTING</div>
     <h2>조회수보다<br><span class="accent">실제 반응</span></h2>
@@ -1281,7 +1446,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="viral-crm">
-  <span class="section-no">25 / 31</span>
+  <span class="section-no">26 / 32</span>
   <div class="wrap">
     <div class="eyebrow">PAID × CRM CONNECTION</div>
     <h2>반응 고객을<br><span class="em">다음 전환으로</span></h2>
@@ -1301,7 +1466,7 @@ p{word-break:keep-all}
 </section>
 
 <section id="creative" class="creative" style="background:#F7FAFC">
-  <span class="section-no">26 / 31</span>
+  <span class="section-no">27 / 32</span>
   <div class="wrap">
     <div class="eyebrow">Creative Portfolio</div>
     <h2>Creative<br><span class="em">Portfolio</span></h2>
@@ -1351,16 +1516,16 @@ p{word-break:keep-all}
   </div>
 </section>
 
-<section id="report"><span class="section-no">27 / 31</span><div class="wrap"><div class="eyebrow">Self-developed Reporting</div><h2>자체개발<br><span class="accent">성과 대시보드</span></h2><div class="report-gallery"><div class="report-shot"><img src="assets/report-dashboard.png" alt="LinkPrice SA 성과 대시보드"><div class="report-caption"><b>성과 대시보드</b><span>KPI · 캠페인 유형별 분석</span></div></div><div class="report-shot"><img src="assets/report-product.png" alt="LinkPrice 상품별 성과 대시보드"><div class="report-caption"><b>상품별 데이터</b><span>모델별 매출 비중 · CVR · ROAS</span></div></div></div><div class="grid" style="margin-top:18px"><div class="card c4"><div class="pill">DAILY</div><h3>상시 모니터링</h3><p class="muted">소진 · ROAS · CPC · CVR 이상징후 확인</p></div><div class="card c4"><div class="pill">WEEKLY</div><h3>성과 변화 공유</h3><p class="muted">캠페인 · 상품 · 키워드 단위 변화 정리</p></div><div class="card c4 brand"><div class="pill">MONTHLY</div><h3>액션 플랜</h3><p class="muted">성과 원인 분석 → 예산·입찰·소재 개선</p></div></div></div></section>
+<section id="report"><span class="section-no">28 / 32</span><div class="wrap"><div class="eyebrow">Self-developed Reporting</div><h2>자체개발<br><span class="accent">성과 대시보드</span></h2><div class="report-gallery"><div class="report-shot"><img src="assets/report-dashboard.png" alt="LinkPrice SA 성과 대시보드"><div class="report-caption"><b>성과 대시보드</b><span>KPI · 캠페인 유형별 분석</span></div></div><div class="report-shot"><img src="assets/report-product.png" alt="LinkPrice 상품별 성과 대시보드"><div class="report-caption"><b>상품별 데이터</b><span>모델별 매출 비중 · CVR · ROAS</span></div></div></div><div class="grid" style="margin-top:18px"><div class="card c4"><div class="pill">DAILY</div><h3>상시 모니터링</h3><p class="muted">소진 · ROAS · CPC · CVR 이상징후 확인</p></div><div class="card c4"><div class="pill">WEEKLY</div><h3>성과 변화 공유</h3><p class="muted">캠페인 · 상품 · 키워드 단위 변화 정리</p></div><div class="card c4 brand"><div class="pill">MONTHLY</div><h3>액션 플랜</h3><p class="muted">성과 원인 분석 → 예산·입찰·소재 개선</p></div></div></div></section>
 
-<section id="process"><span class="section-no">28 / 31</span><div class="wrap"><div class="eyebrow">Performance Optimization Loop</div><h2>Plan → Operate<br><span class="accent">→ Optimize</span></h2><div class="flow"><div class="step"><small>01 PLAN</small><h3>목표·KPI 정의</h3><p class="muted">매체별 역할·예산 설계</p></div><div class="arrow">→</div><div class="step"><small>02 SET-UP</small><h3>캠페인 세팅</h3><p class="muted">트래킹·소재·상품 구조화</p></div><div class="arrow">→</div><div class="step"><small>03 OPERATE</small><h3>일별 운영</h3><p class="muted">입찰·예산·타겟 조정</p></div><div class="arrow">→</div><div class="step"><small>04 OPTIMIZE</small><h3>분석·개선</h3><p class="muted">원인 진단 후 재배분</p></div></div></div></section>
+<section id="process"><span class="section-no">29 / 32</span><div class="wrap"><div class="eyebrow">Performance Optimization Loop</div><h2>Plan → Operate<br><span class="accent">→ Optimize</span></h2><div class="flow"><div class="step"><small>01 PLAN</small><h3>목표·KPI 정의</h3><p class="muted">매체별 역할·예산 설계</p></div><div class="arrow">→</div><div class="step"><small>02 SET-UP</small><h3>캠페인 세팅</h3><p class="muted">트래킹·소재·상품 구조화</p></div><div class="arrow">→</div><div class="step"><small>03 OPERATE</small><h3>일별 운영</h3><p class="muted">입찰·예산·타겟 조정</p></div><div class="arrow">→</div><div class="step"><small>04 OPTIMIZE</small><h3>분석·개선</h3><p class="muted">원인 진단 후 재배분</p></div></div></div></section>
 
-<section id="comm" style="background:#FBFCF8"><span class="section-no">29 / 31</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
+<section id="comm" style="background:#FBFCF8"><span class="section-no">30 / 32</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
 
-<section id="fee"><span class="section-no">30 / 31</span><div class="wrap"><div class="eyebrow">Fee Structure</div><h2>Fee<br><span class="accent">Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>공식대행 구조</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>공식대행 구조</td><td>집행 규모 기준 협의</td></tr><tr><td>11번가 / G마켓 / ABLY</td><td>공식대행 구조</td><td>통합 운영 범위 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
+<section id="fee"><span class="section-no">31 / 32</span><div class="wrap"><div class="eyebrow">Fee Structure</div><h2>Fee<br><span class="accent">Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>공식대행 구조</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>공식대행 구조</td><td>집행 규모 기준 협의</td></tr><tr><td>11번가 / G마켓 / ABLY</td><td>공식대행 구조</td><td>통합 운영 범위 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
 
 <section id="close" class="closing">
-  <span class="section-no" style="color:rgba(255,255,255,.3)">31 / 31</span>
+  <span class="section-no" style="color:rgba(255,255,255,.3)">32 / 32</span>
   <div class="wrap">
     <img class="hero-logo" src="assets/linkprice-logo.png" alt="LinkPrice">
     <div class="eyebrow" style="margin-top:44px">LINKPRICE</div>
