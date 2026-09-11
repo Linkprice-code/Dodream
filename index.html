@@ -916,6 +916,119 @@ html{scroll-behavior:smooth}
   .deck-hint{display:none}
 }
 
+
+/* v18 true horizontal slide deck */
+html, body{
+  width:100%;
+  height:100%;
+  overflow:hidden !important;
+}
+body{
+  margin:0;
+}
+.main{
+  margin-left:280px !important;
+  width:calc(100vw - 280px) !important;
+  height:100vh !important;
+  display:flex !important;
+  flex-direction:row !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  scroll-snap-type:x mandatory !important;
+  scroll-behavior:smooth !important;
+  scrollbar-width:none;
+}
+.main::-webkit-scrollbar{display:none}
+.main > section{
+  flex:0 0 calc(100vw - 280px) !important;
+  width:calc(100vw - 280px) !important;
+  height:100vh !important;
+  min-height:100vh !important;
+  box-sizing:border-box !important;
+  overflow:hidden !important;
+  scroll-snap-align:start !important;
+  scroll-snap-stop:always !important;
+  padding:56px 48px 44px !important;
+  align-items:flex-start !important;
+}
+.main > section > .wrap{
+  width:100% !important;
+  max-width:1380px !important;
+  margin:0 auto !important;
+  height:100% !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.section-no{
+  position:absolute !important;
+  top:20px !important;
+  right:30px !important;
+  z-index:3 !important;
+}
+.sidebar{
+  position:fixed !important;
+  left:0; top:0; bottom:0;
+  height:100vh !important;
+  overflow-y:auto !important;
+}
+.deck-controls{
+  right:24px !important;
+  bottom:20px !important;
+}
+.deck-hint{font-size:11px !important}
+
+/* slide-sized typography */
+.main > section h2{
+  margin-top:4px !important;
+  margin-bottom:20px !important;
+}
+.main > section .lead{
+  margin-top:0 !important;
+  margin-bottom:18px !important;
+}
+
+/* make dense cards fit naturally on one slide */
+.viral-page-grid{
+  gap:14px !important;
+  margin-top:18px !important;
+}
+.viral-page-card{
+  min-height:220px !important;
+  padding:22px !important;
+}
+.viral-page-card h3{
+  font-size:24px !important;
+}
+.viral-page-card p{
+  font-size:15px !important;
+  line-height:1.68 !important;
+}
+
+/* split-page helper */
+.slide-note{
+  margin-top:18px;
+  padding:14px 16px;
+  border-radius:14px;
+  background:#EEF7F4;
+  color:#45645F;
+  font-size:13px;
+  line-height:1.65;
+  font-weight:800;
+}
+
+@media(max-width:900px){
+  .sidebar{display:none !important}
+  .main{
+    margin-left:0 !important;
+    width:100vw !important;
+  }
+  .main > section{
+    flex-basis:100vw !important;
+    width:100vw !important;
+    padding:46px 24px 34px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -947,20 +1060,22 @@ html{scroll-behavior:smooth}
 <a href="#integrated">20. Global</a>
 <a href="#viral-overview">21. 바이럴 개요</a>
 <a href="#viral-influencer">22. 인플루언서</a>
-<a href="#viral-content">23. UGC · 체험단 · 공구 · PR</a>
-<a href="#viral-live">24. 라이브커머스</a>
-<a href="#viral-traffic">25. 외부 트래픽</a>
-<a href="#viral-report">26. 바이럴 리포트</a>
-<a href="#viral-crm">27. CRM · 비즈뿌리오</a>
-<a href="#pricing-live">28. 단가 · 라이브</a>
-<a href="#pricing-influencer">29. 단가 · 인플루언서</a>
-<a href="#pricing-pr">30. 단가 · 공구/언론</a>
-<a href="#pricing-crm">31. 단가 · CRM</a>
-<a href="#fee">32. 단가 · 매체 수수료</a>
-<a href="#report">33. 성과 보고</a>
-<a href="#process">34. 업무 프로세스</a>
-<a href="#comm">35. 커뮤니케이션</a>
-<a href="#close">36. Closing</a>
+<a href="#viral-content">23. UGC · 체험단 · 공구</a>
+<a href="#viral-content-extra">24. PR · 콘텐츠 재활용</a>
+<a href="#viral-live">25. 라이브커머스</a>
+<a href="#viral-traffic">26. 외부 트래픽</a>
+<a href="#viral-report">27. 바이럴 리포트</a>
+<a href="#viral-crm">28. CRM · 비즈뿌리오</a>
+<a href="#pricing-live">29. 단가 · 라이브</a>
+<a href="#pricing-influencer">30. 단가 · 인플루언서</a>
+<a href="#pricing-groupbuy">31. 단가 · 공동구매</a>
+<a href="#pricing-pr">32. 단가 · 언론보도</a>
+<a href="#pricing-crm">33. 단가 · CRM</a>
+<a href="#fee">34. 단가 · 매체 수수료</a>
+<a href="#report">35. 성과 보고</a>
+<a href="#process">36. 업무 프로세스</a>
+<a href="#comm">37. 커뮤니케이션</a>
+<a href="#close">38. Closing</a>
 </nav>
   <div class="side-budget"><span>MONTHLY MARKETING BUDGET</span><strong>₩300M</strong><span>Performance 270M · Viral 30M</span></div>
 </aside>
@@ -973,7 +1088,7 @@ html{scroll-behavior:smooth}
 </div></section>
 
 <section id="company-profile" style="background:#F7FAFC">
-  <span class="section-no">02 / 36</span>
+  <span class="section-no">02 / 38</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · COMPANY</div>
     <h2>26년의 운영 경험,<br><span class="em">성과로 증명합니다.</span></h2>
@@ -999,7 +1114,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="company-business">
-  <span class="section-no">03 / 36</span>
+  <span class="section-no">03 / 38</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · BUSINESS</div>
     <h2>Performance에서<br><span class="accent">Commerce까지</span></h2>
@@ -1030,7 +1145,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="company-strength" style="background:#FBFCF8">
-  <span class="section-no">04 / 36</span>
+  <span class="section-no">04 / 38</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · COMPETITIVENESS</div>
     <h2>운영 네트워크와<br><span class="em">재무 안정성</span></h2>
@@ -1053,7 +1168,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="company-media">
-  <span class="section-no">05 / 36</span>
+  <span class="section-no">05 / 38</span>
   <div class="wrap">
     <div class="eyebrow">LINKPRICE · MEDIA COVERAGE</div>
     <h2>주요 광고 <span class="accent">매체</span></h2>
@@ -1084,7 +1199,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="overview" style="background:#FBFCF8">
-  <span class="section-no">06 / 36</span>
+  <span class="section-no">06 / 38</span>
   <div class="wrap">
     <div class="eyebrow">Proposal Overview</div>
     <h2>제안 <span class="accent">Overview</span></h2>
@@ -1101,12 +1216,12 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<section id="budget"><span class="section-no">07 / 36</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
+<section id="budget"><span class="section-no">07 / 38</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
 <div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW / month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW / month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
 <div class="splitbar"><i></i><i></i></div><p class="muted">Performance 90% · Viral 10% / 총 월 3억원 기준</p></div></section>
 
 <section id="health" style="background:#FBFCF8;align-items:flex-start">
-  <span class="section-no">08 / 36</span>
+  <span class="section-no">08 / 38</span>
   <div class="wrap">
     <div class="eyebrow">Health Supplement Reference</div>
     <h2>건기식 <span class="em">Reference</span></h2>
@@ -1155,7 +1270,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="beauty" style="align-items:flex-start">
-  <span class="section-no">09 / 36</span>
+  <span class="section-no">09 / 38</span>
   <div class="wrap">
     <div class="eyebrow">Beauty & Skincare Reference</div>
     <h2>Beauty <span class="accent">Reference</span></h2>
@@ -1203,7 +1318,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="creative" class="creative" style="background:#F7FAFC">
-  <span class="section-no">10 / 36</span>
+  <span class="section-no">10 / 38</span>
   <div class="wrap">
     <div class="eyebrow">Creative Portfolio</div>
     <h2>Creative<br><span class="em">Portfolio</span></h2>
@@ -1253,10 +1368,10 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<section id="team" style="background:#F7FAFC"><span class="section-no">11 / 36</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div><div class="support-box"><b>LIVE TEAM</b><span>라이브 기획 · 큐시트 · 쇼호스트 · 송출 · 방송 후 리포트 지원</span></div></div></div></section>
+<section id="team" style="background:#F7FAFC"><span class="section-no">11 / 38</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div><div class="support-box"><b>LIVE TEAM</b><span>라이브 기획 · 큐시트 · 쇼호스트 · 송출 · 방송 후 리포트 지원</span></div></div></div></section>
 
 <section id="product-strategy" style="background:#FBFCF8">
-  <span class="section-no">12 / 36</span>
+  <span class="section-no">12 / 38</span>
   <div class="wrap">
     <div class="eyebrow">SKU Portfolio Strategy</div>
     <h2>Hero SKU<br><span class="accent">× Growth SKU</span></h2>
@@ -1325,7 +1440,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="naver-strategy">
-  <span class="section-no">13 / 36</span>
+  <span class="section-no">13 / 38</span>
   <div class="wrap">
     <div class="eyebrow">NAVER STRATEGY</div>
     <h2>NAVER<br><span class="em">SA · GFA · BSA</span></h2>
@@ -1356,7 +1471,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="google-strategy" style="background:#F7FAFC">
-  <span class="section-no">14 / 36</span>
+  <span class="section-no">14 / 38</span>
   <div class="wrap">
     <div class="eyebrow">GOOGLE STRATEGY</div>
     <h2>Google<br><span class="accent">P.Max 중심</span></h2>
@@ -1377,7 +1492,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="meta-strategy">
-  <span class="section-no">15 / 36</span>
+  <span class="section-no">15 / 38</span>
   <div class="wrap">
     <div class="eyebrow">META STRATEGY</div>
     <h2>META<br><span class="em">ABO Performance</span></h2>
@@ -1393,7 +1508,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="kakao-strategy" style="background:#FBFCF8">
-  <span class="section-no">16 / 36</span>
+  <span class="section-no">16 / 38</span>
   <div class="wrap">
     <div class="eyebrow">KAKAO STRATEGY</div>
     <h2>KAKAO<br><span class="accent">3-Campaign</span></h2>
@@ -1410,7 +1525,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="retarget-strategy">
-  <span class="section-no">17 / 36</span>
+  <span class="section-no">17 / 38</span>
   <div class="wrap">
     <div class="eyebrow">RETARGETING STRATEGY</div>
     <h2>Mobon × <span class="em">Criteo</span></h2>
@@ -1440,7 +1555,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="coupang-strategy" style="background:#F7FAFC">
-  <span class="section-no">18 / 36</span>
+  <span class="section-no">18 / 38</span>
   <div class="wrap">
     <div class="eyebrow">COUPANG STRATEGY</div>
     <h2>COUPANG<br><span class="accent">SKU 중심 운영</span></h2>
@@ -1461,7 +1576,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="openmarket-strategy">
-  <span class="section-no">19 / 36</span>
+  <span class="section-no">19 / 38</span>
   <div class="wrap">
     <div class="eyebrow">OPEN MARKET STRATEGY</div>
     <h2>11ST · GMARKET · <span class="em">ABLY</span></h2>
@@ -1477,7 +1592,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="integrated" style="background:#FBFCF8">
-  <span class="section-no">20 / 36</span>
+  <span class="section-no">20 / 38</span>
   <div class="wrap">
     <div class="eyebrow">GLOBAL EXPANSION</div>
     <h2>Global<br><span class="accent">Expansion</span></h2>
@@ -1504,7 +1619,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="viral-overview" style="background:#F7FAFC">
-  <span class="section-no">21 / 36</span>
+  <span class="section-no">21 / 38</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL · 30M</div>
     <h2>Viral<br><span class="accent">Framework</span></h2>
@@ -1520,7 +1635,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="viral-influencer">
-  <span class="section-no">22 / 36</span>
+  <span class="section-no">22 / 38</span>
   <div class="wrap">
     <div class="eyebrow">INFLUENCER MARKETING</div>
     <h2>Influencer<br><span class="em">ALL IN ONE</span></h2>
@@ -1539,8 +1654,8 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-<section id="viral-content" style="background:#FBFCF8">
-  <span class="section-no">23 / 36</span>
+<section id="viral-content">
+  <span class="section-no">23 / 38</span>
   <div class="wrap">
     <div class="eyebrow">CONTENT SEEDING</div>
     <h2>Review × <span class="accent">UGC</span></h2>
@@ -1550,14 +1665,28 @@ html{scroll-behavior:smooth}
       <div class="viral-page-card"><small>BLOG</small><h3>검색형 리뷰 자산</h3><p>제품 정보와 사용 후기를 충분히 설명할 수 있는 블로그 리뷰 콘텐츠를 확보해 검색 접점을 확장합니다.</p></div>
       <div class="viral-page-card"><small>TRIAL GROUP</small><h3>블로그 · 릴스 체험단</h3><p>실제 사용 후기를 다량 확보해 상품별 사용 맥락과 반응 메시지를 비교하고 검색·SNS 콘텐츠 풀을 확장합니다.</p></div>
       <div class="viral-page-card"><small>GROUP BUY</small><h3>공동구매 · 육아맘</h3><p>팔로워 규모와 카테고리 적합도를 기준으로 공동구매 파트너를 구성해 구매 전환이 가능한 판매 접점을 확보합니다.</p></div>
-      <div class="viral-page-card"><small>PR</small><h3>언론보도</h3><p>브랜드 이슈와 최근 팩트를 중심으로 기사형 콘텐츠를 구성해 검색 결과와 브랜드 신뢰도 보조 자산으로 활용합니다.</p></div>
-      <div class="viral-page-card dark"><small>SECONDARY USE</small><h3>콘텐츠 → 광고 재활용</h3><p>반응이 검증된 리뷰·릴스·인플루언서 콘텐츠를 퍼포먼스 광고 소재로 재가공해 추가 학습과 전환 확대에 활용합니다.</p></div>
     </div>
   </div>
 </section>
 
+<section id="viral-content-extra" style="background:#FBFCF8">
+  <span class="section-no">24 / 38</span>
+  <div class="wrap">
+    <div class="eyebrow">CONTENT SCALE</div>
+    <h2>PR × <span class="em">Secondary Use</span></h2>
+    <p class="lead">확보한 콘텐츠를 검색·신뢰도·퍼포먼스 광고까지 이어지는 재사용 가능한 자산으로 만듭니다.</p>
+    <div class="viral-page-grid">
+      <div class="viral-page-card"><small>PR</small><h3>언론보도</h3><p>브랜드 이슈와 최근 팩트를 중심으로 기사형 콘텐츠를 구성해 검색 결과와 브랜드 신뢰도 보조 자산으로 활용합니다.</p></div>
+      <div class="viral-page-card dark"><small>SECONDARY USE</small><h3>콘텐츠 → 광고 재활용</h3><p>반응이 검증된 리뷰·릴스·인플루언서 콘텐츠를 퍼포먼스 광고 소재로 재가공해 추가 학습과 전환 확대에 활용합니다.</p></div>
+      <div class="viral-page-card"><small>SEARCH ASSET</small><h3>검색 접점 확대</h3><p>블로그·언론·리뷰 콘텐츠를 통해 광고 외 검색 결과에서도 제품·브랜드 정보 접점을 넓힙니다.</p></div>
+      <div class="viral-page-card"><small>WINNING MESSAGE</small><h3>반응 메시지 축적</h3><p>콘텐츠별 조회·저장·공유·클릭 반응을 비교해 다음 소재와 캠페인에 활용할 핵심 메시지를 선별합니다.</p></div>
+    </div>
+    <div class="slide-note">한 페이지에 내용이 과밀하지 않도록 Review/UGC와 PR/재활용 전략을 분리했습니다.</div>
+  </div>
+</section>
+
 <section id="viral-live" style="background:#F7FAFC">
-  <span class="section-no">24 / 36</span>
+  <span class="section-no">25 / 38</span>
   <div class="wrap">
     <div class="eyebrow">LIVE COMMERCE</div>
     <h2>Live<br><span class="accent">Commerce</span></h2>
@@ -1580,7 +1709,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="viral-traffic">
-  <span class="section-no">25 / 36</span>
+  <span class="section-no">26 / 38</span>
   <div class="wrap">
     <div class="eyebrow">EXTERNAL TRAFFIC</div>
     <h2>Traffic<br><span class="em">Boosting</span></h2>
@@ -1595,7 +1724,7 @@ html{scroll-behavior:smooth}
 </section>
 
 <section id="viral-report" style="background:#F7FAFC">
-  <span class="section-no">26 / 36</span>
+  <span class="section-no">27 / 38</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL REPORTING</div>
     <h2>조회수보다<br><span class="accent">실제 반응</span></h2>
@@ -1616,9 +1745,8 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-
 <section id="viral-crm">
-  <span class="section-no">27 / 36</span>
+  <span class="section-no">28 / 38</span>
   <div class="wrap">
     <div class="eyebrow">CRM · BIZPPURIO</div>
     <h2>Paid 이후,<br><span class="em">CRM으로 재접점</span></h2>
@@ -1648,10 +1776,8 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-
-
 <section id="pricing-live" style="background:#F7FAFC">
-  <span class="section-no">28 / 36</span>
+  <span class="section-no">29 / 38</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL PRICE · LIVE</div>
     <h2>Live Commerce<br><span class="accent">Price</span></h2>
@@ -1669,10 +1795,8 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-
-
 <section id="pricing-influencer">
-  <span class="section-no">29 / 36</span>
+  <span class="section-no">30 / 38</span>
   <div class="wrap">
     <div class="eyebrow">VIRAL PRICE · INFLUENCER</div>
     <h2>Influencer × <span class="em">Trial Group</span></h2>
@@ -1693,18 +1817,11 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
-
-
-<section id="pricing-pr" style="background:#FBFCF8">
-  <span class="section-no">30 / 36</span>
+<section id="pricing-groupbuy" style="background:#FBFCF8">
+  <span class="section-no">31 / 38</span>
   <div class="wrap">
-    <div class="eyebrow">VIRAL PRICE · GROUP BUY / PR</div>
-    <h2>공동구매 × <span class="accent">언론보도</span></h2>
-    <div class="price-summary">
-      <div class="box"><small>GROUP BUY</small><b>육아맘 공동구매</b><span>팔로워 규모별 제작비 + 판매 수수료 구조</span></div>
-      <div class="box"><small>PR</small><b>언론보도</b><span>매체 등급별 기사 작성·송출 비용</span></div>
-      <div class="box"><small>ROLE</small><b>검색·신뢰·전환 보조</b><span>퍼포먼스 광고 외 브랜드 접점 확대</span></div>
-    </div>
+    <div class="eyebrow">VIRAL PRICE · GROUP BUY</div>
+    <h2>공동구매<br><span class="accent">Price</span></h2>
     <div class="price-table-wrap">
       <table class="price-table">
         <thead><tr><th>공동구매 구분</th><th>비용</th><th>판매 수수료</th></tr></thead>
@@ -1717,9 +1834,18 @@ html{scroll-behavior:smooth}
         </tbody>
       </table>
     </div>
-    <div class="price-table-wrap" style="margin-top:16px">
+    <div class="price-note">※ VAT 별도. 제품·판매조건·인플루언서 규모에 따라 최종 조건은 조정될 수 있습니다.</div>
+  </div>
+</section>
+
+<section id="pricing-pr" style="background:#fff">
+  <span class="section-no">32 / 38</span>
+  <div class="wrap">
+    <div class="eyebrow">VIRAL PRICE · PR</div>
+    <h2>언론보도<br><span class="em">Price</span></h2>
+    <div class="price-table-wrap">
       <table class="price-table">
-        <thead><tr><th>언론보도 매체 등급</th><th>비용</th><th>비고</th></tr></thead>
+        <thead><tr><th>매체 등급</th><th>비용</th><th>비고</th></tr></thead>
         <tbody>
           <tr><td><strong>A급</strong></td><td>원자료 표기: 건당 100~50만원</td><td>기획기사 별도 논의</td></tr>
           <tr><td><strong>B급</strong></td><td>건당 40만원</td><td>-</td></tr>
@@ -1727,14 +1853,12 @@ html{scroll-behavior:smooth}
         </tbody>
       </table>
     </div>
-    <div class="price-note">※ VAT 별도. 언론보도 A급 비용은 제공 PPT 원자료 표기를 그대로 반영했습니다.</div>
+    <div class="price-note">※ VAT 별도. A급 비용은 제공 PPT 원자료 표기를 그대로 유지했습니다.</div>
   </div>
 </section>
 
-
-
 <section id="pricing-crm">
-  <span class="section-no">31 / 36</span>
+  <span class="section-no">33 / 38</span>
   <div class="wrap">
     <div class="eyebrow">CRM PRICE · BIZPPURIO</div>
     <h2>CRM<br><span class="em">Messaging Price</span></h2>
@@ -1756,17 +1880,16 @@ html{scroll-behavior:smooth}
   </div>
 </section>
 
+<section id="fee"><span class="section-no">34 / 38</span><div class="wrap"><div class="eyebrow">PERFORMANCE PRICE · MEDIA FEE</div><h2>Media<br><span class="accent">Fee Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>공식대행 구조</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>공식대행 구조</td><td>집행 규모 기준 협의</td></tr><tr><td>11번가 / G마켓 / ABLY</td><td>공식대행 구조</td><td>통합 운영 범위 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
 
-<section id="fee"><span class="section-no">32 / 36</span><div class="wrap"><div class="eyebrow">PERFORMANCE PRICE · MEDIA FEE</div><h2>Media<br><span class="accent">Fee Structure</span></h2><table class="fee-table"><thead><tr><th>매체</th><th>기본 수수료</th><th>대규모 예산 운영</th></tr></thead><tbody><tr><td>NAVER SA</td><td>공식대행 구조</td><td>운영 범위 기준 협의</td></tr><tr><td>NAVER GFA</td><td>공식대행 구조</td><td>Volume 기준 협의</td></tr><tr><td>Meta</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Google</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>Coupang</td><td>10%</td><td>집행금액 기준 Sliding 협의</td></tr><tr><td>KAKAO / Mobon / Criteo</td><td>공식대행 구조</td><td>집행 규모 기준 협의</td></tr><tr><td>11번가 / G마켓 / ABLY</td><td>공식대행 구조</td><td>통합 운영 범위 기준 협의</td></tr><tr><td>Commerce Platform</td><td>매체별 협의</td><td>통합 운영 범위 기준 협의</td></tr></tbody></table><p class="muted" style="margin-top:14px">※ 집행 규모 및 업무 범위에 따라 최종 협의</p></div></section>
+<section id="report"><span class="section-no">35 / 38</span><div class="wrap"><div class="eyebrow">Self-developed Reporting</div><h2>자체개발<br><span class="accent">성과 대시보드</span></h2><div class="report-gallery"><div class="report-shot"><img src="assets/report-dashboard.png" alt="LinkPrice SA 성과 대시보드"><div class="report-caption"><b>성과 대시보드</b><span>KPI · 캠페인 유형별 분석</span></div></div><div class="report-shot"><img src="assets/report-product.png" alt="LinkPrice 상품별 성과 대시보드"><div class="report-caption"><b>상품별 데이터</b><span>모델별 매출 비중 · CVR · ROAS</span></div></div></div><div class="grid" style="margin-top:18px"><div class="card c4"><div class="pill">DAILY</div><h3>상시 모니터링</h3><p class="muted">소진 · ROAS · CPC · CVR 이상징후 확인</p></div><div class="card c4"><div class="pill">WEEKLY</div><h3>성과 변화 공유</h3><p class="muted">캠페인 · 상품 · 키워드 단위 변화 정리</p></div><div class="card c4 brand"><div class="pill">MONTHLY</div><h3>액션 플랜</h3><p class="muted">성과 원인 분석 → 예산·입찰·소재 개선</p></div></div></div></section>
 
-<section id="report"><span class="section-no">33 / 36</span><div class="wrap"><div class="eyebrow">Self-developed Reporting</div><h2>자체개발<br><span class="accent">성과 대시보드</span></h2><div class="report-gallery"><div class="report-shot"><img src="assets/report-dashboard.png" alt="LinkPrice SA 성과 대시보드"><div class="report-caption"><b>성과 대시보드</b><span>KPI · 캠페인 유형별 분석</span></div></div><div class="report-shot"><img src="assets/report-product.png" alt="LinkPrice 상품별 성과 대시보드"><div class="report-caption"><b>상품별 데이터</b><span>모델별 매출 비중 · CVR · ROAS</span></div></div></div><div class="grid" style="margin-top:18px"><div class="card c4"><div class="pill">DAILY</div><h3>상시 모니터링</h3><p class="muted">소진 · ROAS · CPC · CVR 이상징후 확인</p></div><div class="card c4"><div class="pill">WEEKLY</div><h3>성과 변화 공유</h3><p class="muted">캠페인 · 상품 · 키워드 단위 변화 정리</p></div><div class="card c4 brand"><div class="pill">MONTHLY</div><h3>액션 플랜</h3><p class="muted">성과 원인 분석 → 예산·입찰·소재 개선</p></div></div></div></section>
+<section id="process"><span class="section-no">36 / 38</span><div class="wrap"><div class="eyebrow">Performance Optimization Loop</div><h2>Plan → Operate<br><span class="accent">→ Optimize</span></h2><div class="flow"><div class="step"><small>01 PLAN</small><h3>목표·KPI 정의</h3><p class="muted">매체별 역할·예산 설계</p></div><div class="arrow">→</div><div class="step"><small>02 SET-UP</small><h3>캠페인 세팅</h3><p class="muted">트래킹·소재·상품 구조화</p></div><div class="arrow">→</div><div class="step"><small>03 OPERATE</small><h3>일별 운영</h3><p class="muted">입찰·예산·타겟 조정</p></div><div class="arrow">→</div><div class="step"><small>04 OPTIMIZE</small><h3>분석·개선</h3><p class="muted">원인 진단 후 재배분</p></div></div></div></section>
 
-<section id="process"><span class="section-no">34 / 36</span><div class="wrap"><div class="eyebrow">Performance Optimization Loop</div><h2>Plan → Operate<br><span class="accent">→ Optimize</span></h2><div class="flow"><div class="step"><small>01 PLAN</small><h3>목표·KPI 정의</h3><p class="muted">매체별 역할·예산 설계</p></div><div class="arrow">→</div><div class="step"><small>02 SET-UP</small><h3>캠페인 세팅</h3><p class="muted">트래킹·소재·상품 구조화</p></div><div class="arrow">→</div><div class="step"><small>03 OPERATE</small><h3>일별 운영</h3><p class="muted">입찰·예산·타겟 조정</p></div><div class="arrow">→</div><div class="step"><small>04 OPTIMIZE</small><h3>분석·개선</h3><p class="muted">원인 진단 후 재배분</p></div></div></div></section>
-
-<section id="comm" style="background:#FBFCF8"><span class="section-no">35 / 36</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
+<section id="comm" style="background:#FBFCF8"><span class="section-no">37 / 38</span><div class="wrap"><div class="eyebrow">Communication System</div><h2>Fast Communication.<br><span class="em">Clear Record.</span></h2><div class="grid"><div class="card c4 brand"><div class="pill"><span class="dot"></span>KAKAO TALK</div><h3>일상 업무·긴급 대응</h3><p class="muted">성과 이슈, 예산 소진, 빠른 의사결정이 필요한 업무를 실시간으로 공유합니다.</p></div><div class="card c4"><div class="pill">E-MAIL</div><h3>세팅·변경 이력</h3><p class="muted">광고 세팅, 주요 승인사항, 변경 요청 등 기록이 필요한 업무를 관리합니다.</p></div><div class="card c4"><div class="pill">FIGMA</div><h3>소재 협업</h3><p class="muted">디자이너와 소재 시안, 카피, 수정사항을 한 화면에서 빠르게 정리합니다.</p></div></div></div></section>
 
 <section id="close" class="closing">
-  <span class="section-no" style="color:rgba(255,255,255,.3)">36 / 36</span>
+  <span class="section-no" style="color:rgba(255,255,255,.3)">38 / 38</span>
   <div class="wrap">
     <img class="hero-logo" src="assets/linkprice-logo.png" alt="LinkPrice">
     <div class="eyebrow" style="margin-top:44px">LINKPRICE</div>
@@ -1790,27 +1913,63 @@ sections.forEach(s=>obs.observe(s));
 </div>
 
 
+
+
+
 <script>
 (function(){
-  const sections = Array.from(document.querySelectorAll('main.main > section'));
-  function currentIndex(){
-    const mid = window.scrollY + window.innerHeight * 0.45;
-    let idx = 0;
-    sections.forEach((s,i)=>{ if(s.offsetTop <= mid) idx=i; });
-    return idx;
+  const deck = document.querySelector('main.main');
+  const slides = Array.from(deck.querySelectorAll(':scope > section'));
+  let index = 0;
+
+  function clamp(v){ return Math.max(0, Math.min(slides.length - 1, v)); }
+  function goTo(i, updateHash=true){
+    index = clamp(i);
+    deck.scrollTo({ left: slides[index].offsetLeft, behavior:'smooth' });
+    if(updateHash && history.replaceState){
+      history.replaceState(null,'','#'+slides[index].id);
+    }
   }
-  function go(delta){
-    const idx = Math.max(0, Math.min(sections.length-1, currentIndex()+delta));
-    sections[idx].scrollIntoView({behavior:'smooth', block:'start'});
+  function syncIndex(){
+    const left = deck.scrollLeft;
+    let best = 0, dist = Infinity;
+    slides.forEach((s,i)=>{
+      const d = Math.abs(s.offsetLeft - left);
+      if(d < dist){ dist=d; best=i; }
+    });
+    index = best;
   }
-  document.addEventListener('keydown', (e)=>{
-    const tag = (e.target && e.target.tagName || '').toLowerCase();
+
+  document.addEventListener('keydown',(e)=>{
+    const tag=(e.target?.tagName||'').toLowerCase();
     if(['input','textarea','select'].includes(tag)) return;
-    if(e.key === 'ArrowRight'){ e.preventDefault(); go(1); }
-    if(e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); }
+    if(e.key==='ArrowRight' || e.key==='PageDown'){ e.preventDefault(); goTo(index+1); }
+    if(e.key==='ArrowLeft' || e.key==='PageUp'){ e.preventDefault(); goTo(index-1); }
+    if(e.key==='Home'){ e.preventDefault(); goTo(0); }
+    if(e.key==='End'){ e.preventDefault(); goTo(slides.length-1); }
   });
-  document.getElementById('deckPrev')?.addEventListener('click', ()=>go(-1));
-  document.getElementById('deckNext')?.addEventListener('click', ()=>go(1));
+
+  document.getElementById('deckPrev')?.addEventListener('click',()=>goTo(index-1));
+  document.getElementById('deckNext')?.addEventListener('click',()=>goTo(index+1));
+
+  document.querySelectorAll('.nav a').forEach(a=>{
+    a.addEventListener('click',(e)=>{
+      const id=a.getAttribute('href')?.slice(1);
+      const i=slides.findIndex(s=>s.id===id);
+      if(i>=0){ e.preventDefault(); goTo(i); }
+    });
+  });
+
+  let t;
+  deck.addEventListener('scroll',()=>{
+    clearTimeout(t);
+    t=setTimeout(syncIndex,80);
+  });
+
+  const initial=location.hash.slice(1);
+  const initialIndex=slides.findIndex(s=>s.id===initial);
+  if(initialIndex>=0) index=initialIndex;
+  requestAnimationFrame(()=>deck.scrollTo({left:slides[index].offsetLeft, behavior:'auto'}));
 })();
 </script>
 
