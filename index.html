@@ -1599,6 +1599,29 @@ body{
   #product-strategy .sku-summary{margin-top:12px !important;padding:11px 13px !important;font-size:12px !important;line-height:1.55 !important;}
 }
 
+
+/* v28 PDF reliability fixes */
+.budget-num small{
+  font-family:Pretendard,"Noto Sans KR","Segoe UI",sans-serif !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+  line-height:1 !important;
+  letter-spacing:-.01em !important;
+  padding:7px 10px !important;
+  transform:none !important;
+}
+@media print{
+  .budget-num small{font-size:14px !important;padding:6px 9px !important;transform:none !important;}
+  #creative-health-product .portfolio-card img,
+  #creative-beauty-product .portfolio-card img{height:350px !important;}
+  #creative-health-product .portfolio-card .cap,
+  #creative-beauty-product .portfolio-card .cap{padding:14px 16px 15px !important;}
+  #creative-health-product .portfolio-card .cap b,
+  #creative-beauty-product .portfolio-card .cap b{font-size:18px !important;margin-bottom:6px !important;}
+  #creative-health-product .portfolio-card .cap p,
+  #creative-beauty-product .portfolio-card .cap p{font-size:12px !important;line-height:1.5 !important;}
+}
+
 </style>
 </head>
 <body>
@@ -1790,7 +1813,7 @@ body{
 </section>
 
 <section id="budget"><span class="section-no">07 / 41</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
-<div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW/month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW/month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
+<div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>월 2.7억원</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>월 3천만원</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
 <div class="splitbar"><i></i><i></i></div><p class="muted">Performance 90% · Viral 10% / 총 월 3억원 기준</p></div></section>
 
 <section id="health" style="background:#FBFCF8;align-items:flex-start">
