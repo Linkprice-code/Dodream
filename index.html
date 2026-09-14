@@ -1112,6 +1112,146 @@ body{
   margin-top:10px !important;
 }
 
+
+/* v21 page 5 fixed alignment */
+#company-media .media-row2{
+  grid-template-columns:250px 1fr !important;
+}
+#company-media .media-cat{
+  display:grid !important;
+  grid-template-columns:140px 78px !important;
+  align-items:center !important;
+  column-gap:10px !important;
+  padding:20px 22px !important;
+  white-space:nowrap !important;
+}
+#company-media .media-cat b{
+  display:block !important;
+  margin:0 !important;
+  color:var(--navy) !important;
+  font-size:18px !important;
+  font-weight:900 !important;
+}
+#company-media .media-cat span{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:78px !important;
+  min-width:78px !important;
+  height:28px !important;
+  margin:0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  border-radius:999px !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:.04em !important;
+}
+#company-media .official-placeholder{
+  visibility:hidden !important;
+}
+#company-media .media-pills{
+  padding-left:18px !important;
+}
+
+
+/* v22: numbered step badges - screen + PDF safe */
+.strategy-item{
+  display:flex !important;
+  align-items:flex-start !important;
+  grid-template-columns:none !important;
+  gap:0 !important;
+}
+.strategy-item > i{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex:0 0 38px !important;
+  width:38px !important;
+  min-width:38px !important;
+  max-width:38px !important;
+  height:38px !important;
+  min-height:38px !important;
+  margin:0 14px 0 0 !important;
+  padding:0 !important;
+  box-sizing:border-box !important;
+  border-radius:50% !important;
+  line-height:38px !important;
+  text-align:center !important;
+  text-indent:0 !important;
+  overflow:visible !important;
+  font-size:11px !important;
+  font-weight:900 !important;
+  font-style:normal !important;
+  color:#285B57 !important;
+  background:#DDF2EC !important;
+}
+.strategy-item > div{
+  flex:1 1 auto !important;
+  min-width:0 !important;
+  padding-top:1px !important;
+}
+
+/* same protection for other circular numbered steps */
+.growth-step{
+  display:flex !important;
+  align-items:flex-start !important;
+  grid-template-columns:none !important;
+  gap:0 !important;
+}
+.growth-step > i{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  flex:0 0 34px !important;
+  width:34px !important;
+  min-width:34px !important;
+  height:34px !important;
+  margin:0 12px 0 0 !important;
+  padding:0 !important;
+  line-height:34px !important;
+  text-align:center !important;
+  box-sizing:border-box !important;
+  overflow:visible !important;
+}
+.growth-step > div{flex:1 1 auto !important;min-width:0 !important;}
+
+@media print{
+  .strategy-item{
+    display:flex !important;
+    align-items:flex-start !important;
+  }
+  .strategy-item > i{
+    display:block !important;
+    flex:none !important;
+    float:left !important;
+    width:38px !important;
+    min-width:38px !important;
+    height:38px !important;
+    line-height:38px !important;
+    margin:0 14px 0 0 !important;
+    padding:0 !important;
+    text-align:center !important;
+    vertical-align:middle !important;
+    overflow:visible !important;
+  }
+  .strategy-item > div{
+    display:block !important;
+    width:auto !important;
+    overflow:visible !important;
+  }
+  .growth-step > i{
+    display:block !important;
+    float:left !important;
+    width:34px !important;
+    height:34px !important;
+    line-height:34px !important;
+    margin:0 12px 0 0 !important;
+    padding:0 !important;
+    text-align:center !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1259,23 +1399,23 @@ body{
     <p class="lead">포털 · 커머스 · SNS · 네트워크까지 한 조직에서 연결합니다.</p>
     <div class="media-table">
       <div class="media-row2">
-        <div class="media-cat">포털 · 검색 <span>OFFICIAL</span></div>
+        <div class="media-cat"><b>포털 · 검색</b><span>OFFICIAL</span></div>
         <div class="media-pills"><div class="media-pill">NAVER</div><div class="media-pill">NATE</div><div class="media-pill">Google</div></div>
       </div>
       <div class="media-row2">
-        <div class="media-cat">오픈마켓 <span>OFFICIAL</span></div>
+        <div class="media-cat"><b>오픈마켓</b><span>OFFICIAL</span></div>
         <div class="media-pills"><div class="media-pill">Gmarket</div><div class="media-pill">Auction</div><div class="media-pill">11st</div><div class="media-pill">LOTTE ON</div><div class="media-pill">SSG.COM</div><div class="media-pill">Coupang</div></div>
       </div>
       <div class="media-row2">
-        <div class="media-cat">버티컬 커머스 <span>OFFICIAL</span></div>
+        <div class="media-cat"><b>버티컬 커머스</b><span>OFFICIAL</span></div>
         <div class="media-pills"><div class="media-pill">Zigzag</div><div class="media-pill">ABLY</div></div>
       </div>
       <div class="media-row2">
-        <div class="media-cat">SNS · 플랫폼 <span>OFFICIAL</span></div>
+        <div class="media-cat"><b>SNS · 플랫폼</b><span>OFFICIAL</span></div>
         <div class="media-pills"><div class="media-pill">Meta</div><div class="media-pill">Kakao</div></div>
       </div>
       <div class="media-row2">
-        <div class="media-cat">네트워크</div>
+        <div class="media-cat"><b>네트워크</b><span class="official-placeholder">OFFICIAL</span></div>
         <div class="media-pills"><div class="media-pill">Criteo</div><div class="media-pill">Mobon</div><div class="media-pill">ACX</div></div>
       </div>
     </div>
@@ -1426,7 +1566,7 @@ body{
   </div>
 </section>
 
-<section id="team" style="background:#F7FAFC"><span class="section-no">12 / 39</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div><div class="support-box"><b>LIVE TEAM</b><span>라이브 기획 · 큐시트 · 쇼호스트 · 송출 · 방송 후 리포트 지원</span></div></div></div></section>
+<section id="team" style="background:#F7FAFC"><span class="section-no">12 / 39</span><div class="wrap"><div class="eyebrow">Dedicated Team</div><h2>경력별 전담<br><span class="em">운영 조직</span></h2><div class="team"><div class="team-group"><div class="yr">10Y</div><h3>Strategy Lead</h3><div class="member"><b>김재현 팀장 · 10Y</b><span>전체 전략 · KPI · 예산 총괄</span></div></div><div class="team-group"><div class="yr">5Y</div><h3>Performance Lead</h3><div class="member"><b>안희성 · 5Y</b><span>Meta · Google · Retargeting · Global</span></div><div class="member"><b>최연아 · 5Y</b><span>NAVER SA · GFA</span></div></div><div class="team-group"><div class="yr">3–4Y</div><h3>Commerce / Retail</h3><div class="member"><b>한상진 · 4Y</b><span>Retail · Commerce Platform</span></div><div class="member"><b>정명윤 · 3Y</b><span>Open Market · Reporting</span></div></div></div><div class="support-team"><div class="support-box"><b>DESIGN TEAM</b><span>광고 소재 기획 · 제작 · Figma 협업 · 긴급 수정 대응</span></div><div class="support-box"><b>VIRAL TEAM</b><span>Influencer · UGC · Viral · 제휴 파트너 운영</span></div><div class="support-box"><b>LIVE TEAM</b><span>라이브 기획 · 큐시트 · 쇼호스트 · 송출 · 방송 후 리포트 지원</span></div></div></div></section>
 
 <section id="product-strategy" style="background:#FBFCF8">
   <span class="section-no">13 / 39</span>
