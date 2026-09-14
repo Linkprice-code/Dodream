@@ -1428,6 +1428,177 @@ body{
   #naver-strategy .rail-step p{font-size:10px !important;line-height:1.32 !important;margin-top:4px !important;}
 }
 
+
+
+/* v27 final polish */
+.budget-num{
+  display:flex !important;
+  align-items:flex-end !important;
+  gap:10px !important;
+  flex-wrap:wrap !important;
+  line-height:1 !important;
+}
+.budget-num small{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:6px 10px !important;
+  border-radius:10px !important;
+  white-space:nowrap !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+  letter-spacing:0 !important;
+  line-height:1.05 !important;
+  transform:translateY(-4px) !important;
+}
+.budget-main .budget-num small{
+  background:rgba(255,255,255,.12) !important;
+  border:1px solid rgba(255,255,255,.18) !important;
+  color:#F7FBFC !important;
+}
+.budget-side .budget-num small{
+  background:rgba(48,67,77,.08) !important;
+  border:1px solid rgba(48,67,77,.12) !important;
+  color:var(--navy) !important;
+}
+.budget-main p,.budget-side p{margin-top:12px !important;}
+
+/* Product strategy contrast */
+.sku-panel.growth .sku-summary{
+  background:rgba(255,255,255,.08) !important;
+  color:#FFFFFF !important;
+  font-size:15px !important;
+  font-weight:700 !important;
+  line-height:1.7 !important;
+}
+
+/* Creative portfolio readability */
+.portfolio-card img{
+  image-rendering:auto !important;
+}
+.portfolio-card .cap b{
+  font-size:21px !important;
+  line-height:1.32 !important;
+}
+.portfolio-card .cap p{
+  font-size:14px !important;
+  line-height:1.65 !important;
+}
+
+/* NAVER strategy page 16 */
+#naver-strategy .wrap{
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  height:100% !important;
+}
+#naver-strategy .lead{
+  margin-bottom:0 !important;
+}
+#naver-strategy .platform-grid{
+  gap:14px !important;
+  margin-top:20px !important;
+}
+#naver-strategy .platform-card{
+  min-height:208px !important;
+  padding:20px !important;
+}
+#naver-strategy .platform-card h3{
+  font-size:26px !important;
+  line-height:1.2 !important;
+  margin-bottom:12px !important;
+}
+#naver-strategy .platform-card p{
+  font-size:15px !important;
+  line-height:1.72 !important;
+}
+#naver-strategy .platform-card.dark p{
+  color:#FFFFFF !important;
+}
+#naver-strategy .strategy-rail{
+  gap:12px !important;
+  margin-top:14px !important;
+}
+#naver-strategy .rail-step{
+  min-height:108px !important;
+  padding:16px 14px !important;
+}
+#naver-strategy .rail-step small{
+  font-size:9px !important;
+  margin-bottom:5px !important;
+}
+#naver-strategy .rail-step b{
+  font-size:16px !important;
+  line-height:1.2 !important;
+}
+#naver-strategy .rail-step p{
+  font-size:12px !important;
+  line-height:1.5 !important;
+  margin-top:6px !important;
+}
+
+@media print{
+  /* preserve vector-like text clarity and page fit */
+  body{-webkit-font-smoothing:antialiased !important;text-rendering:geometricPrecision !important;}
+  #naver-strategy{padding-top:34px !important;padding-bottom:22px !important;}
+  #naver-strategy .eyebrow{margin-bottom:8px !important;}
+  #naver-strategy h2{font-size:60px !important;line-height:1 !important;margin-bottom:14px !important;}
+  #naver-strategy .lead{font-size:16px !important;line-height:1.5 !important;}
+  #naver-strategy .platform-grid{margin-top:18px !important;gap:12px !important;}
+  #naver-strategy .platform-card{min-height:194px !important;padding:18px !important;border-radius:18px !important;}
+  #naver-strategy .platform-card small{font-size:10px !important;margin-bottom:6px !important;}
+  #naver-strategy .platform-card h3{font-size:24px !important;line-height:1.18 !important;margin-bottom:10px !important;}
+  #naver-strategy .platform-card p{font-size:14px !important;line-height:1.58 !important;}
+  #naver-strategy .strategy-rail{margin-top:12px !important;gap:10px !important;}
+  #naver-strategy .rail-step{min-height:96px !important;padding:14px 12px !important;border-radius:14px !important;}
+  #naver-strategy .rail-step small{font-size:8px !important;margin-bottom:3px !important;}
+  #naver-strategy .rail-step b{font-size:14px !important;line-height:1.2 !important;}
+  #naver-strategy .rail-step p{font-size:11px !important;line-height:1.35 !important;margin-top:4px !important;}
+
+  .budget-num{gap:8px !important;}
+  .budget-num small{font-size:15px !important;padding:5px 9px !important;transform:translateY(-3px) !important;}
+  .portfolio-card img{height:370px !important;object-fit:contain !important;}
+  .portfolio-card .cap b{font-size:19px !important;}
+  .portfolio-card .cap p{font-size:13px !important;line-height:1.58 !important;}
+  .sku-panel.growth .sku-summary{font-size:14px !important;color:#FFFFFF !important;}
+}
+
+
+
+/* v27.1 print fix: product strategy keep 2-column layout */
+@media print{
+  #product-strategy{padding-top:34px !important;padding-bottom:20px !important;}
+  #product-strategy h2{font-size:58px !important;line-height:1.02 !important;margin-bottom:14px !important;}
+  #product-strategy .lead{font-size:15px !important;line-height:1.5 !important;margin-bottom:0 !important;}
+  #product-strategy .sku-board{
+    display:grid !important;
+    grid-template-columns:1.1fr .9fr !important;
+    gap:14px !important;
+    margin-top:18px !important;
+    align-items:start !important;
+  }
+  #product-strategy .sku-panel{padding:18px !important;border-radius:20px !important;}
+  #product-strategy .sku-head{margin-bottom:14px !important;}
+  #product-strategy .sku-head h3{font-size:22px !important;line-height:1.15 !important;}
+  #product-strategy .sku-head small{font-size:10px !important;margin-bottom:5px !important;}
+  #product-strategy .sku-rule{font-size:10px !important;padding:7px 10px !important;}
+  #product-strategy .hero-products{gap:10px !important;}
+  #product-strategy .hero-product{padding:12px !important;border-radius:16px !important;}
+  #product-strategy .hero-product img{height:118px !important;border-radius:10px !important;}
+  #product-strategy .hero-product b{font-size:12px !important;line-height:1.35 !important;margin-top:10px !important;}
+  #product-strategy .hero-product span,#product-strategy .hero-product a{font-size:10px !important;margin-top:4px !important;}
+  #product-strategy .sku-actions{gap:8px !important;margin-top:12px !important;}
+  #product-strategy .sku-action{padding:10px 10px !important;border-radius:12px !important;}
+  #product-strategy .sku-action small{font-size:8px !important;margin-bottom:4px !important;}
+  #product-strategy .sku-action b{font-size:11px !important;line-height:1.25 !important;}
+  #product-strategy .growth-steps{gap:8px !important;margin-top:8px !important;}
+  #product-strategy .growth-step{padding:10px 11px !important;border-radius:12px !important;}
+  #product-strategy .growth-step > i{width:30px !important;height:30px !important;line-height:30px !important;margin-right:10px !important;font-size:10px !important;}
+  #product-strategy .growth-step b{font-size:12px !important;line-height:1.2 !important;margin-bottom:3px !important;}
+  #product-strategy .growth-step span{font-size:10px !important;line-height:1.38 !important;}
+  #product-strategy .sku-summary{margin-top:12px !important;padding:11px 13px !important;font-size:12px !important;line-height:1.55 !important;}
+}
+
 </style>
 </head>
 <body>
@@ -1619,7 +1790,7 @@ body{
 </section>
 
 <section id="budget"><span class="section-no">07 / 41</span><div class="wrap"><div class="eyebrow">Budget Framework</div><h2>Performance 90%<br><span class="accent">Viral 10%</span></h2><p class="lead">월 3억원 통합 운영</p>
-<div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW / month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW / month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
+<div class="budget-board"><div class="budget-main"><div class="eyebrow" style="color:#8DDAE5">PERFORMANCE MARKETING</div><div class="budget-num">270M <small>KRW/month</small></div><p>Search · Social · Display · Retargeting · Commerce</p></div><div class="budget-side"><div class="eyebrow">VIRAL MARKETING</div><div class="budget-num" style="color:var(--navy)">30M <small>KRW/month</small></div><p class="muted">Influencer · UGC · Viral · Content Seeding</p></div></div>
 <div class="splitbar"><i></i><i></i></div><p class="muted">Performance 90% · Viral 10% / 총 월 3억원 기준</p></div></section>
 
 <section id="health" style="background:#FBFCF8;align-items:flex-start">
@@ -1909,22 +2080,22 @@ body{
 <div class="platform-grid">
   <div class="platform-card">
     <small>SA · SEARCH</small><h3>키워드 조합 운영</h3>
-    <p>메인 · 브랜드 · 기능 · 원료 · 롱테일<br>키워드를 검색 의도별로 분리 운영.<br><br>전환율 · CPC · 검색량을 기준으로<br>입찰과 예산을 주 단위로 조정.</p>
+    <p>메인·브랜드·기능·원료·롱테일 키워드를 검색 의도별로 분리 운영합니다. 전환율·CPC·검색량을 기준으로 입찰과 예산을 주 단위로 조정합니다.</p>
   </div>
   <div class="platform-card">
     <small>GFA · DISPLAY</small><h3>캠페인 유형별 역할 분리</h3>
-    <p>웹사이트 전환은 잠재고객 중심.<br>인지도·트래픽은 맞춤타겟 기반 신규 모수 확보.<br>카탈로그 판매(NDA)는 확보 모수 리타겟.</p>
+    <p>웹사이트 전환은 잠재고객 중심으로 운영하고, 인지도·트래픽은 맞춤타겟 기반 신규 모수를 확보합니다. 카탈로그 판매(NDA)는 확보 모수를 재공략합니다.</p>
   </div>
   <div class="platform-card dark">
     <small>BSA · BRAND</small><h3>행사 맞춤 브랜드 소재</h3>
-    <p>네이버 행사·자체 프로모션 일정에 맞춰 브랜드 소재 제작 및 세팅.<br>행사 전·중·후 메시지와 랜딩을 구분 운영.</p>
+    <p>네이버 행사·자체 프로모션 일정에 맞춰 브랜드 소재를 제작·세팅합니다. 행사 전·중·후 메시지와 랜딩을 구분 운영합니다.</p>
   </div>
 </div>
 <div class="strategy-rail">
-  <div class="rail-step"><small>01 SEARCH</small><b>고의도 수요 회수</b><p>브랜드·기능·원료·롱테일</p></div>
-  <div class="rail-step"><small>02 ACQUIRE</small><b>신규 유입 확대</b><p>맞춤타겟·관심군 기반 모수 확보</p></div>
-  <div class="rail-step"><small>03 RETARGET</small><b>카탈로그 재접점</b><p>상품조회·방문 모수 전환 회수</p></div>
-  <div class="rail-step"><small>04 PROMOTION</small><b>행사 수요 증폭</b><p>BSA 소재·랜딩·프로모션 연계</p></div>
+  <div class="rail-step"><small>01 SEARCH</small><b>고의도 수요 회수</b><p>브랜드·기능·원료 수요 회수</p></div>
+  <div class="rail-step"><small>02 ACQUIRE</small><b>신규 유입 확대</b><p>맞춤타겟·관심군 신규 모수</p></div>
+  <div class="rail-step"><small>03 RETARGET</small><b>카탈로그 재접점</b><p>상품조회·방문 모수 전환</p></div>
+  <div class="rail-step"><small>04 PROMOTION</small><b>행사 수요 증폭</b><p>BSA 소재·랜딩 연계</p></div>
 </div>
 
   </div>
