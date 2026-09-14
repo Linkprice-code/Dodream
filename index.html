@@ -1320,6 +1320,94 @@ body{
   line-height:1.6 !important;
 }
 
+
+/* v24 trial group price table */
+.trial-price-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:22px;
+}
+.trial-price-panel{
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:#fff;
+  overflow:hidden;
+}
+.trial-price-head{
+  padding:18px 20px;
+  background:#F3F8F6;
+  border-bottom:1px solid #DDE8E3;
+}
+.trial-price-head.reels{
+  background:#FFF1F6;
+  border-bottom-color:#F2DCE5;
+}
+.trial-price-head small{
+  display:block;
+  color:var(--cyan);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.08em;
+  margin-bottom:5px;
+}
+.trial-price-head h3{
+  margin:0;
+  color:var(--navy);
+  font-size:24px;
+  line-height:1.2;
+}
+.trial-price-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+.trial-price-table th{
+  padding:12px 10px;
+  background:#FAFBFC;
+  border-bottom:1px solid #E7ECEF;
+  color:#536572;
+  font-size:11px;
+  font-weight:900;
+  text-align:center;
+}
+.trial-price-table td{
+  padding:13px 10px;
+  border-bottom:1px solid #EDF1F3;
+  color:#4E5F6C;
+  font-size:13px;
+  line-height:1.45;
+  text-align:center;
+  vertical-align:middle;
+}
+.trial-price-table tr:last-child td{border-bottom:0}
+.trial-price-table td strong{
+  color:var(--navy);
+  font-size:15px;
+}
+.trial-custom{
+  margin-top:16px;
+  padding:16px 18px;
+  border-radius:16px;
+  background:#FFF3F7;
+  border:1px solid #F2DCE5;
+}
+.trial-custom b{
+  display:block;
+  color:#A22F61;
+  font-size:16px;
+  margin-bottom:6px;
+}
+.trial-custom p{
+  margin:0;
+  color:#66545D;
+  font-size:13px;
+  line-height:1.6;
+}
+@media(max-width:1000px){
+  .trial-price-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -2150,22 +2238,102 @@ body{
 <section id="pricing-influencer">
   <span class="section-no">33 / 41</span>
   <div class="wrap">
-    <div class="eyebrow">VIRAL PRICE · INFLUENCER</div>
-    <h2>Influencer × <span class="em">Trial Group</span></h2>
-    <div class="price-table-wrap">
-      <table class="price-table">
-        <thead><tr><th>구분</th><th>구성</th><th>콘텐츠</th><th>비용</th></tr></thead>
-        <tbody>
-          <tr><td><strong>5천~1만</strong></td><td>인플루언서 3인<br>살림/육아 카테고리</td><td>릴스 1회 + 스토리 1회<br>2차 활용 3개월</td><td>1,500,000원 + a</td></tr>
-          <tr><td><strong>1~5만</strong></td><td>인플루언서 3인</td><td>릴스 1회 + 스토리 1회<br>2차 활용 3개월</td><td>2,500,000원 + a</td></tr>
-          <tr><td><strong>5~30만</strong></td><td>인플루언서 3인</td><td>릴스 1회 + 스토리 1회<br>2차 활용 3개월</td><td>5,500,000원 + a</td></tr>
-          <tr><td><strong>30~100만</strong></td><td>매크로 인플루언서 1인</td><td>릴스 1회 + 스토리 1회<br>2차 활용 3개월</td><td>15,000,000원 + a</td></tr>
-          <tr><td><strong>릴스 체험단</strong></td><td>체험단 운영</td><td>광고주 요청 반영 릴스 제작</td><td>200,000원 + a</td></tr>
-          <tr><td><strong>블로그 체험단</strong></td><td>체험단 운영</td><td>블로그 리뷰 콘텐츠</td><td>별도 협의</td></tr>
-        </tbody>
-      </table>
+    <div class="eyebrow">VIRAL PRICE · TRIAL GROUP</div>
+    <h2>Blog × <span class="em">Reels</span></h2>
+    <p class="lead">블로그·릴스 체험단은 모집 인원과 기준 구간별로 단가를 구분해 운영합니다.</p>
+
+    <div class="trial-price-grid">
+      <div class="trial-price-panel">
+        <div class="trial-price-head">
+          <small>BLOG TRIAL GROUP</small>
+          <h3>블로그 체험단 견적</h3>
+        </div>
+        <table class="trial-price-table">
+          <thead>
+            <tr>
+              <th>일 방문자수</th>
+              <th>모집 인원</th>
+              <th>견적 금액</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>100명 이상</strong></td>
+              <td>10명</td>
+              <td><strong>35만원</strong></td>
+            </tr>
+            <tr>
+              <td><strong>300명 이상</strong></td>
+              <td>10명</td>
+              <td><strong>45만원</strong></td>
+            </tr>
+            <tr>
+              <td><strong>10,000명 이상</strong></td>
+              <td>10명</td>
+              <td><strong>110만원</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="trial-price-panel">
+        <div class="trial-price-head reels">
+          <small>REELS TRIAL GROUP</small>
+          <h3>릴스 체험단 견적</h3>
+        </div>
+        <table class="trial-price-table">
+          <thead>
+            <tr>
+              <th>팔로워 수</th>
+              <th>모집 인원</th>
+              <th>견적 금액</th>
+              <th>건당 금액</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>100 ~ 1,000명</strong></td>
+              <td>5명</td>
+              <td><strong>35만원</strong></td>
+              <td>7만원</td>
+            </tr>
+            <tr>
+              <td><strong>1,000 ~ 3,000명</strong></td>
+              <td>5명</td>
+              <td><strong>50만원</strong></td>
+              <td>10만원</td>
+            </tr>
+            <tr>
+              <td><strong>2,000 ~ 5,000명</strong></td>
+              <td>5명</td>
+              <td><strong>75만원</strong></td>
+              <td>15만원</td>
+            </tr>
+            <tr>
+              <td><strong>4,000 ~ 10,000명</strong></td>
+              <td>5명</td>
+              <td><strong>100만원</strong></td>
+              <td>20만원</td>
+            </tr>
+            <tr>
+              <td><strong>8,000 ~ 30,000명</strong></td>
+              <td>5명</td>
+              <td><strong>200만원</strong></td>
+              <td>40만원</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="price-note">※ VAT 별도. 인플루언서 개별 단가·제품 배송·추가 촬영 조건에 따라 비용이 달라질 수 있습니다.</div>
+
+    <div class="trial-custom">
+      <b>맞춤 릴스 제작 옵션</b>
+      <p>광고주 요청 내용에 맞춰 릴스 감도가 높은 크리에이터를 별도 선별하는 맞춤 제작은 기존 체험단 금액에 <strong>+20만원 α</strong> 기준으로 추천·구성합니다.</p>
+    </div>
+
+    <div class="price-note">
+      ※ VAT 별도. 제품 발송 및 세부 가이드 조건에 따라 최종 운영 범위는 협의될 수 있습니다.
+    </div>
   </div>
 </section>
 
