@@ -1049,42 +1049,68 @@ body{
 }
 
 
-/* v19 fit fixes for reference / portfolio slides */
-#health h2,#beauty h2{font-size:58px!important;margin-bottom:12px!important;}
-#health .case-hero,#beauty .case-hero{margin-top:12px!important;padding:18px!important;}
-#health .case-hero-top,#beauty .case-hero-top{margin-bottom:10px!important;}
-#health .case-hero-title h3,#beauty .case-hero-title h3{font-size:26px!important;}
-#health .case-kpis,#beauty .case-kpis{gap:10px!important;margin:10px 0!important;}
-#health .case-kpi,#beauty .case-kpi{padding:11px 14px!important;min-height:78px!important;}
-#health .case-kpi strong,#beauty .case-kpi strong{font-size:21px!important;}
-#health .case-kpi small,#beauty .case-kpi small{font-size:10px!important;margin-bottom:3px!important;}
-#health .case-kpi em,#beauty .case-kpi em{font-size:9px!important;margin-top:2px!important;}
-#health .before-after,#beauty .before-after{margin:8px 0!important;gap:8px!important;}
-#health .ba-box,#beauty .ba-box{padding:10px 14px!important;min-height:72px!important;}
-#health .ba-box strong,#beauty .ba-box strong{font-size:17px!important;}
-#health .ba-box .muted,#beauty .ba-box .muted{font-size:11px!important;margin:3px 0 0!important;}
-#health .case-note,#beauty .case-note{margin-top:8px!important;padding:9px 13px!important;font-size:11px!important;line-height:1.45!important;}
-#health .ref-strip,#beauty .ref-strip{gap:10px!important;margin-top:10px!important;}
-#health .ref-mini,#beauty .ref-mini{padding:12px!important;min-height:142px!important;}
-#health .ref-mini .ref-top,#beauty .ref-mini .ref-top{margin-bottom:5px!important;}
-#health .ref-mini .ref-top b,#beauty .ref-mini .ref-top b{font-size:16px!important;}
-#health .ref-mini .pair,#beauty .ref-mini .pair{margin-top:5px!important;gap:4px!important;}
-#health .ref-mini .pair div,#beauty .ref-mini .pair div{padding:7px!important;}
-#health .ref-mini .pair small,#beauty .ref-mini .pair small{font-size:8px!important;}
-#health .ref-mini .pair strong,#beauty .ref-mini .pair strong{font-size:12px!important;}
-#health .ref-mini p,#beauty .ref-mini p{font-size:9px!important;line-height:1.35!important;margin-top:6px!important;}
-#health .rep-note,#beauty .rep-note{font-size:9px!important;margin-top:5px!important;}
+/* v20 reference-card enlargement */
+#health .ref-strip,#beauty .ref-strip{gap:18px!important;margin-top:22px!important}
+#health .ref-mini,#beauty .ref-mini{padding:26px!important;min-height:275px!important;border-radius:22px!important}
+#health .ref-mini .ref-top,#beauty .ref-mini .ref-top{margin-bottom:16px!important}
+#health .ref-mini .ref-top b,#beauty .ref-mini .ref-top b{font-size:24px!important;line-height:1.2!important}
+#health .ref-mini .ref-top span,#beauty .ref-mini .ref-top span{font-size:11px!important}
+#health .ref-mini .pair,#beauty .ref-mini .pair{grid-template-columns:1fr 22px 1fr!important;gap:8px!important;margin-top:12px!important}
+#health .ref-mini .pair div,#beauty .ref-mini .pair div{padding:15px 13px!important;min-height:72px!important}
+#health .ref-mini .pair small,#beauty .ref-mini .pair small{font-size:11px!important;margin-bottom:6px!important}
+#health .ref-mini .pair strong,#beauty .ref-mini .pair strong{font-size:20px!important;line-height:1.25!important}
+#health .ref-mini p,#beauty .ref-mini p{font-size:14px!important;line-height:1.65!important;margin-top:14px!important}
 
-#creative-health h2,#creative-beauty h2{font-size:58px!important;margin-bottom:12px!important;}
-#creative-health .portfolio-wrap,#creative-beauty .portfolio-wrap{margin-top:12px!important;gap:12px!important;}
-#creative-health .portfolio-block,#creative-beauty .portfolio-block{padding:18px!important;}
-#creative-health .portfolio-head,#creative-beauty .portfolio-head{margin-bottom:10px!important;}
-#creative-health .portfolio-head b,#creative-beauty .portfolio-head b{font-size:19px!important;}
-#creative-health .portfolio-grid,#creative-beauty .portfolio-grid{gap:14px!important;}
-#creative-health .portfolio-card img,#creative-beauty .portfolio-card img{height:350px!important;aspect-ratio:auto!important;object-fit:contain!important;background:#fff!important;}
-#creative-health .portfolio-card .cap,#creative-beauty .portfolio-card .cap{padding:10px 12px!important;}
-#creative-health .portfolio-card .cap b,#creative-beauty .portfolio-card .cap b{font-size:14px!important;}
-#creative-health .portfolio-card .cap p,#creative-beauty .portfolio-card .cap p{font-size:10px!important;line-height:1.45!important;margin-top:4px!important;}
+
+/* v20 final reference layout */
+#health .case-hero,#beauty .case-hero{
+  padding:24px 26px !important;
+  margin-top:18px !important;
+}
+#health .case-hero-top,#beauty .case-hero-top{
+  margin-bottom:12px !important;
+}
+#health .case-hero-title h3,#beauty .case-hero-title h3{
+  font-size:30px !important;
+}
+#health .case-kpis,#beauty .case-kpis{
+  margin:12px 0 !important;
+}
+#health .case-kpi,#beauty .case-kpi{
+  min-height:96px !important;
+  padding:14px 16px !important;
+}
+#health .case-kpi strong,#beauty .case-kpi strong{
+  font-size:24px !important;
+}
+#health .case-note,#beauty .case-note{
+  margin-top:12px !important;
+  padding:12px 16px !important;
+  font-size:13px !important;
+}
+#health .ref-strip,#beauty .ref-strip{
+  gap:18px !important;
+  margin-top:18px !important;
+}
+#health .ref-mini,#beauty .ref-mini{
+  padding:22px !important;
+  min-height:210px !important;
+}
+#health .ref-mini .ref-top b,#beauty .ref-mini .ref-top b{
+  font-size:23px !important;
+}
+#health .ref-mini .pair div,#beauty .ref-mini .pair div{
+  min-height:58px !important;
+  padding:11px 10px !important;
+}
+#health .ref-mini .pair strong,#beauty .ref-mini .pair strong{
+  font-size:18px !important;
+}
+#health .ref-mini p,#beauty .ref-mini p{
+  font-size:13px !important;
+  line-height:1.55 !important;
+  margin-top:10px !important;
+}
 
 </style>
 </head>
@@ -1291,14 +1317,9 @@ body{
       </div>
       <div class="case-kpis">
         <div class="case-kpi"><small>광고비</small><strong>1.85억 → 2.01억원</strong><em>+8.6%</em></div>
-        <div class="case-kpi"><small>광고매출</small><strong>8.86억 → 9.85억원</strong><em>+11.2%</em></div>
+        <div class="case-kpi"><small>전체매출</small><strong>8.86억 → 9.85억원</strong><em>+11.2%</em></div>
         <div class="case-kpi"><small>ROAS</small><strong>479% → 491%</strong><em>+12%p</em></div>
         <div class="case-kpi"><small>전환수</small><strong>30,412 → 31,996</strong><em>+5.2%</em></div>
-      </div>
-      <div class="before-after">
-        <div class="ba-box"><small>대행 전</small><strong>ROAS 479%</strong><p class="muted">광고매출 8.86억</p></div>
-        <div class="ba-arrow">→</div>
-        <div class="ba-box"><small>대행 후</small><strong>ROAS 491%</strong><p class="muted">광고매출 9.85억</p></div>
       </div>
       <div class="case-note">브랜드검색·파워링크·쇼핑검색·GFA를 역할별로 분리 운영해 Hero SKU 매출을 유지하면서도 검색 수요와 디스플레이 전환을 함께 확대한 NAVER 중심 운영 사례입니다.</div>
     </div>
@@ -1307,7 +1328,7 @@ body{
       <div class="ref-mini">
         <div class="ref-top"><b>비포락토</b><span>META</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 350%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 371%</strong></div></div>
-        <div class="pair"><div><small>광고매출</small><strong>9,800만원</strong></div><i>→</i><div><small>광고매출</small><strong>1억 1,500만원</strong></div></div>
+        <div class="pair"><div><small>전체매출</small><strong>9,800만원</strong></div><i>→</i><div><small>전체매출</small><strong>1억 1,500만원</strong></div></div>
         <p>전환 우수 타겟·소재 중심으로 예산을 재배분해 매출과 효율을 동반 개선.</p>
       </div>
       <div class="ref-mini">
@@ -1319,11 +1340,10 @@ body{
       <div class="ref-mini">
         <div class="ref-top"><b>모비타</b><span>NAVER</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 292%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 298%</strong></div></div>
-        <div class="pair"><div><small>광고매출</small><strong>1.53억</strong></div><i>→</i><div><small>광고매출</small><strong>1.71억</strong></div></div>
+        <div class="pair"><div><small>전체매출</small><strong>1.53억</strong></div><i>→</i><div><small>전체매출</small><strong>1.71억</strong></div></div>
         <p>브랜드검색·쇼핑검색·파워링크 역할을 분리해 검색 수요 회수 효율을 안정화.</p>
       </div>
     </div>
-    <div class="rep-note">※ GNM 자연의품격 대표 수치는 제공 이미지의 채널 구성과 예산 규모를 기준으로 제안서용 전·후 구간으로 재구성했습니다.</div>
   </div>
 </section>
 
@@ -1340,35 +1360,30 @@ body{
       </div>
       <div class="case-kpis">
         <div class="case-kpi"><small>광고비</small><strong>8,650만원 → 9,100만원</strong><em>+5.2%</em></div>
-        <div class="case-kpi"><small>광고매출</small><strong>7.56억 → 8.82억원</strong><em>+16.7%</em></div>
+        <div class="case-kpi"><small>전체매출</small><strong>7.56억 → 8.82억원</strong><em>+16.7%</em></div>
         <div class="case-kpi"><small>ROAS</small><strong>874% → 969%</strong><em>+95%p</em></div>
         <div class="case-kpi"><small>전환수</small><strong>24,142 → 27,180</strong><em>+12.6%</em></div>
       </div>
-      <div class="before-after">
-        <div class="ba-box"><small>대행 전</small><strong>ROAS 874%</strong><p class="muted">광고매출 7.56억</p></div>
-        <div class="ba-arrow">→</div>
-        <div class="ba-box"><small>대행 후</small><strong>ROAS 969%</strong><p class="muted">광고매출 8.82억</p></div>
-      </div>
-      <div class="case-note">광고비를 단계적으로 확대하면서 키워드·상품·입찰 구조를 정리해 광고매출과 ROAS를 함께 개선.</div>
+      <div class="case-note">광고비를 단계적으로 확대하면서 키워드·상품·입찰 구조를 정리해 전체매출과 ROAS를 함께 개선.</div>
     </div>
 
     <div class="ref-strip">
       <div class="ref-mini">
         <div class="ref-top"><b>Beauty Case A</b><span>META</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 545%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 570%</strong></div></div>
-        <div class="pair"><div><small>매출</small><strong>5.56억</strong></div><i>→</i><div><small>매출</small><strong>5.78억</strong></div></div>
+        <div class="pair"><div><small>전체매출</small><strong>5.56억</strong></div><i>→</i><div><small>전체매출</small><strong>5.78억</strong></div></div>
         <p>저효율 소재 정리 후 전환 우수 소재 중심으로 예산 집중.</p>
       </div>
       <div class="ref-mini">
         <div class="ref-top"><b>Beauty Case B</b><span>META</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 490%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 566%</strong></div></div>
-        <div class="pair"><div><small>매출</small><strong>1.60억</strong></div><i>→</i><div><small>매출</small><strong>1.97억</strong></div></div>
+        <div class="pair"><div><small>전체매출</small><strong>1.60억</strong></div><i>→</i><div><small>전체매출</small><strong>1.97억</strong></div></div>
         <p>리타겟 세분화와 고반응 소재 확대로 매출 볼륨을 단계적으로 확대.</p>
       </div>
       <div class="ref-mini">
         <div class="ref-top"><b>Beauty Case C</b><span>META</span></div>
         <div class="pair"><div><small>대행 전</small><strong>ROAS 659%</strong></div><i>→</i><div><small>대행 후</small><strong>ROAS 681%</strong></div></div>
-        <div class="pair"><div><small>매출</small><strong>2.20억</strong></div><i>→</i><div><small>매출</small><strong>2.48억</strong></div></div>
+        <div class="pair"><div><small>전체매출</small><strong>2.20억</strong></div><i>→</i><div><small>전체매출</small><strong>2.48억</strong></div></div>
         <p>캠페인 구조와 자산 효율을 점검해 안정적인 성장 기조를 확보.</p>
       </div>
     </div>
@@ -1403,8 +1418,8 @@ body{
         <div class="portfolio-head"><b>뷰티 모델 활용 소재</b><span>MODEL-BASED · BRAND + PERFORMANCE</span></div>
         <div class="portfolio-grid">
           <div class="portfolio-card"><img src="assets/beauty_model_1.jpg" alt="뷰티 소재 1"><div class="cap"><b>비플레인 · 브랜드/행사형</b><p>모델 컷과 상품 비주얼, 가격 메시지를 함께 배치해 브랜드감과 프로모션 전달력을 모두 확보.</p></div></div>
-          <div class="portfolio-card"><img src="assets/beauty_model_2_hd.jpg" alt="뷰티 소재 2"><div class="cap"><b>컬러 메이크업 · 효능 비교형</b><p>사용 컷과 컬러 스와치를 함께 노출해 제품 사용감을 빠르게 이해시키는 구조.</p></div></div>
-          <div class="portfolio-card"><img src="assets/beauty_model_3_hd.jpg" alt="뷰티 소재 3"><div class="cap"><b>스킨케어 · 기능성 소구형</b><p>모델 피부 표현과 원료 이미지를 결합해 제품 효능 포인트를 명확히 전달하는 소재.</p></div></div>
+          <div class="portfolio-card"><img src="assets/beauty_model_2_hd.png" alt="뷰티 소재 2"><div class="cap"><b>컬러 메이크업 · 효능 비교형</b><p>사용 컷과 컬러 스와치를 함께 노출해 제품 사용감을 빠르게 이해시키는 구조.</p></div></div>
+          <div class="portfolio-card"><img src="assets/beauty_model_3_hd.png" alt="뷰티 소재 3"><div class="cap"><b>스킨케어 · 기능성 소구형</b><p>모델 피부 표현과 원료 이미지를 결합해 제품 효능 포인트를 명확히 전달하는 소재.</p></div></div>
         </div>
       </div>
     </div>
